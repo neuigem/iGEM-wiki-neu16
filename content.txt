@@ -12,3 +12,15 @@ wiki requirements:
     - Safety
     - Attributions
     - Human Practices
+    
+good reference wikis:
+    - aalto-helsinki 2014
+    - lmu munich 2014
+    
+notes:
+    - bootstrap af
+        - js--need to dl
+    - jquery
+    - javascript functions?
+    - fontawesome via bootstrap
+        - can import fonts w/ @import tag (ie: the old way)
