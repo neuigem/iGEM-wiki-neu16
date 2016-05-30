@@ -1,13 +1,6 @@
 wiki requirements:
     - Team
     - Project
-        - Description
-        - Design
-        - Experiments
-        - Proof of Concept
-        - Demonstrate
-        - Results
-        - Notebook
     - Parts
     - Safety
     - Attributions
