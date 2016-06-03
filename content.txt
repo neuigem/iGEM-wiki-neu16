@@ -15,5 +15,5 @@ notes:
         - js--need to dl
     - jquery
     - javascript functions?
-    - fontawesome via bootstrap
+    - fontawesome via bootstrap?
         - can import fonts w/ @import tag (ie: the old way)

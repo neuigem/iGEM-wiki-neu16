@@ -1,47 +1,43 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
+    font-family:'Open Sans';
 }
 
+a {
+    text-decoration: none;
+    -webkit-transition:all .5s ease;
+    -moz-transition:all .5s ease;
+    -o-transition:all .5s ease;
+    transition:all .5s ease-in-out;
+}
 
 h1 {
-    font-size:15px;
+    font-size:20px;
     font-weight:bold;
     text-align:center;
-    padding:20px 0;
+    padding-bottom:20px;
 }
 
-.container, .container-fluid {
+#igemheader {
+    position:fixed;
+    top:0px;
+    height:20px;
+    background:#000;
+}
+
+.wrap {
+    margin-top:18px;
     font-family:'Open Sans';
     color:#555;
 }
 
-.content {
-    font-size:14px;
+.side {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:400px;
+    height:100%;
+    background:#333;
 }
 
-.caption {
-    font-size:13px;
-}
-
-.content-img {
-    display:block;
-    max-width:300px;
-    margin:auto;
-}
-
-#banner {
-    background-image:url('http://placekitten.com/1920/1080');
-    background-size:cover;
-    height:300px;
-}
-
-#bannercontent {
-    background:rgba(0, 0, 0, 0.3);
-    height:300px;
-    text-align:center;
-    color:#fff;
-    line-height:300px;
-    font-size:30px;
-    text-shadow: 1px 1px .2px #000;
-}
