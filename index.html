@@ -1,15 +1,48 @@
 <html>
     <head>
         <title>Northeastern University 2016 iGEM Team</title>
-        <link href="bootstrap.min.css" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
-        <link href="http://2016.igem.org/Team:Northeastern/bootstrap?action=raw&ctype=text/css" rel="stylesheet">
-        <link href="http://2016.igem.org/Team:Northeastern/CSS?action=raw&ctype=text/css" rel="stylesheet">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">  
+        <link href="style.css" type="text/css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
     </head>
     <body>
     
     <div class="container-fluid">
+<!--
+        <div class="row" id="nav">
+            <a href="/Team:Northeastern">home</a>
+            <a href="/Team:Northeastern/Team">team</a>
+            <a href="/">project</a>
+            <a href="/">parts</a>
+            <a href="/">safety</a>
+            <a href="/">attributions</a>
+            <a href="/">human practices</a>
+        </div>
+-->
+        <nav class="navbar-inverse navbar-default navbar-fixed-top" id="topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand page-scroll" href="#top">Olivia Wan</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about" class="page-scroll">about</a></li>
+            <li><a href="#experience" class="page-scroll">experience</a></li>
+            <li><a href="#contact" class="page-scroll">contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+        
         <div class="row" id="banner">
             <div id="bannercontent">
                 <center>
@@ -19,24 +52,17 @@
                 </center>
             </div>
         </div>
-        <div class="row" id="nav">
-            <a href="/">home</a>
-            <a href="/">team</a>
-            <a href="/">project</a>
-            <a href="/">parts</a>
-            <a href="/">safety</a>
-            <a href="/">attributions</a>
-            <a href="/">human practices</a>
-        </div>
         <div class="row" id="abstract">
+            <div class="col-md-12">
             <h3>abstract</h3>
             <div class="content">
                 Lorem ipsum <i>dolor</i> sit amet, consectetur adipiscing elit. Nulla erat metus, congue non ex nec, tincidunt tincidunt sapien. Suspendisse sed sapien ipsum. Praesent cursus arcu vel condimentum pretium. Nam purus nulla, dignissim nec pellentesque in, tincidunt a enim. Donec augue neque, volutpat vitae pharetra in, aliquet eget elit. Nunc posuere velit massa, quis lobortis justo ultrices sed. Morbi vitae tellus ullamcorper, bibendum massa at, tristique felis. Sed ante tellus, eleifend at sem at, sollicitudin feugiat sapien. Sed posuere leo nisl, quis egestas purus auctor et. Integer porta ac est ut dictum. Ut tellus turpis, aliquam a sodales a, convallis at justo. Donec interdum ante eget blandit ultricies.<p> </p>
                 
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat metus, congue non ex nec, tincidunt tincidunt sapien. Suspendisse sed sapien ipsum. Praesent cursus arcu vel condimentum pretium. Nam purus nulla, dignissim nec pellentesque in, tincidunt a enim. Donec augue neque, volutpat vitae pharetra in, aliquet eget elit. Nunc posuere velit massa, quis lobortis justo ultrices sed. Morbi vitae tellus ullamcorper, bibendum massa at, tristique felis. Sed ante tellus, eleifend at sem at, sollicitudin feugiat sapien. Sed posuere leo nisl, quis egestas purus auctor et. Integer porta ac est ut dictum. Ut tellus turpis, aliquam a sodales a, convallis at justo. Donec interdum ante eget blandit ultricies.
             </div>
+                </div>
         </div>
-        <div class="row" id="sitemap" style="max-width:1200px;margin:auto;">
+        <div class="row" id="sitemap">
             <h3>explore</h3>
             <div class="col-md-4">
                 <a href="/"><img src="http://placehold.it/500x500">
