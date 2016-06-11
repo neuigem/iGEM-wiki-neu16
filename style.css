@@ -53,13 +53,8 @@ h3 {
     color:#555;
 }
 
-#igemheader {
-    position:fixed; 
-    top:0px;
-    height:20px;
-    width:100%;
-    background:#000;
-    z-index: 9999999;
+nav {
+    padding:0px;
 }
 
 #banner {
@@ -77,37 +72,6 @@ h3 {
     max-width: 768px;
     margin:auto;
 }
-
-/*
-#nav {
-    position:fixed;
-    top:0px;
-    width: 100%;
-    background:#333;
-    text-align: center;
-    box-shadow: 0 0 15px #333;
-    z-index: 999999;
-}
-
-
-
-#nav.affix {
-    position: fixed;
-    top: 20px;
-    width: 100%
-}
-
-#nav.affix {
-    top:20px;
-}
-
-#nav a {
-    display:inline-block;
-    line-height: 50px;
-    padding:0 20px;
-    color:#fff;
-}
-*/
 
 #icon {
     height:100px;
