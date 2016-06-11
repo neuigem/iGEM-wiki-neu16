@@ -8,13 +8,12 @@
     src: url('fonts/Roboto-Regular.ttf');
 }
 
-body {
-    font-family:open sans;
+.row * {
+    box-sizing: border-box;
 }
 
-#globalWrapper {
-    font-size:100%;
-    padding:0px;
+body {
+    font-family:open sans;
 }
 
 a {
@@ -45,9 +44,8 @@ h2 {
 h3 {
     text-align:center;
     font-size:30px;
-    margin:0px;
-    margin-bottom:20px;
     letter-spacing: 2px;
+    margin-top:50px;
 }
 
 .container, .container-fluid {
