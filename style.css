@@ -26,16 +26,17 @@ a {
 
 /* main title */
 h1 {
-    font-size:50px;
+    font-size:40px;
     font-weight:bold;
     text-align:center;
     color:#fff;
     text-shadow: 1px 1px .2px #000;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 }
 
 /*main subtitle*/
 h2 {
+    font-size: 20px;
     text-align:center;
     color:#ccc;
 }
@@ -53,13 +54,19 @@ h3 {
     color:#555;
 }
 
-nav {
-    padding:0px;
+.navbar-default {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 0 10px #555;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
 }
 
 #banner {
     position:relative;
-    margin-top:50px;
+    margin-top:55px;
     z-index: 0;
 /*    background-image:url('');*/
     background-color:#aaa;
@@ -68,6 +75,7 @@ nav {
 
 #bannercontent {
     min-height: 300px;
+    padding-top:70px;
     box-sizing: border-box;
     max-width: 768px;
     margin:auto;
