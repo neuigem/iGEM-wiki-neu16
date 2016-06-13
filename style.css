@@ -26,7 +26,8 @@ body {
     font-family:open sans;
 }
 
-a {
+a, a:hover {
+    color:#aaa;
     text-decoration: none;
     -webkit-transition:all .5s ease;
     -moz-transition:all .5s ease;
@@ -36,7 +37,7 @@ a {
 
 /* main title */
 h1 {
-    font-size:55px;
+    font-size:60px;
     font-weight:bold;
     text-align:center;
     color:#fff;
@@ -48,7 +49,7 @@ h1 {
 h2 {
     font-size: 20px;
     text-align:center;
-color:#fff;
+    color:#fff;
 }
 
 /*section header*/
@@ -93,11 +94,24 @@ h4 {
 
 #bannercontent {
     min-height: 600px;
-    padding:150px 20px;
+    padding-top:150px;
+    padding-left:20px;
+    padding-right:20px;
     box-sizing: border-box;
     margin:auto;
-background:rgba(0, 0, 0, 0.5);
+    background:rgba(0, 0, 0, 0.5);
 }
+
+#continue {
+    padding-bottom:100px;
+    color:#fff;
+    text-align: center;
+    margin-top:200px;
+    font-size:50px;
+}
+
+#continue a {color:#fff;text-decoration:none;}
+#continue a:hover {color:#fff;text-decoration:none;}
 
 #icon {
     height:100px;
@@ -117,7 +131,13 @@ background:rgba(0, 0, 0, 0.5);
     margin:auto;
     line-height: 170%;
     font-family: roboto;
-    margin:50px auto;
+    margin:20px auto;
+}
+
+#teamphoto {
+    max-width: 100%;
+    max-height: 100%;
+    margin:100px auto;
 }
 
 #readmore {
@@ -156,11 +176,10 @@ background:rgba(0, 0, 0, 0.5);
 }
 
 #footer {
-    height:100px;
     background:#333;
     text-align: center;
     color:#fff;
-    line-height: 100px;
+    line-height: 50px;
 }
 
 #sponsors {
@@ -168,15 +187,26 @@ background:rgba(0, 0, 0, 0.5);
 }
 
 #sponsors img {
-    display:inline-block;
-    max-height: 150px;
-    margin:20px;
+    max-width:100%;
 }
 
-/* hide components when screen is smaller
+/* hide components when screen is smaller*/
 @media screen and (max-width: 760px) {
-  #sidenav { display: none; }
-}*/
+
+    #bannercontent {
+        padding-top:80px;
+    }
+
+    h1 {
+        font-size:40px;
+    }
+    
+    #continue {
+        margin-top:80px;
+    }
+    
+    #teamphoto {margin:100px auto;}
+}
 
 /*
 #sitemap img {
