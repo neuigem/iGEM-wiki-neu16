@@ -1,17 +1,17 @@
 @font-face {
     font-family:open sans;
-    src: url('fonts/OpenSans-Regular.ttf ');
+    src: url('../fonts/OpenSans-Regular.ttf ');
 }
 
 @font-face {
     font-family:roboto;
-    src: url('fonts/Roboto-Regular.ttf');
+    src: url('../fonts/Roboto-Regular.ttf');
 }
 
 
 @font-face {
     font-family:fontawesome;
-    src: url('fonts/FontAwesome.otf');
+    src: url('../fonts/FontAwesome.otf');
 }
 
 .row * {
@@ -43,6 +43,7 @@ h1 {
     color:#fff;
     text-shadow: 1px 1px .2px #000;
     letter-spacing: 3px;
+    border-bottom:none;
 }
 
 /*main subtitle*/
@@ -69,8 +70,6 @@ h4 {
 
 .container, .container-fluid {
     color:#555;
-    background-image:url('http://unsplash.it/1400/800');
-    background-attachment: fixed;
 }
 
 .navbar-default {
@@ -87,9 +86,10 @@ h4 {
     position:relative;
     margin-top:55px;
     z-index: 0;
-    background-image:url('https://unsplash.it/1920/900');
+    background:url('https://unsplash.it/1920/900');
     background-color:#aaa;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #bannercontent {
@@ -149,16 +149,17 @@ h4 {
 #readmore a {color:#3875A2;}
 
 #sitemap {
-/*    background-image: url('http://unsplash.it/1600/400');*/
-    min-height:300px;
-    color:#fff;
-    text-align: center;
-    background:rgba(0, 0, 0, 0.6);
+    background-image: url('http://unsplash.it/1400/800');
+    background-attachment: fixed;
 }
 
 
 #sitelinks {
     padding-bottom:50px;
+    min-height:300px;
+    color:#fff;
+    text-align: center;
+    background:rgba(0, 0, 0, 0.6);
 }
 
 #sitelinks a {
