@@ -26,6 +26,10 @@ body {
     font-family:open sans;
 }
 
+html, body {
+    height:100%;
+}
+
 a, a:hover {
     color:#aaa;
     text-decoration: none;
@@ -84,7 +88,6 @@ h4 {
 
 #banner {
     position:relative;
-    margin-top:55px;
     z-index: 0;
     background:url('https://unsplash.it/1920/900');
     background-color:#aaa;
@@ -93,8 +96,8 @@ h4 {
 }
 
 #bannercontent {
-    min-height: 600px;
-    padding-top:150px;
+    height:100%;
+    padding-top:20%;
     padding-left:20px;
     padding-right:20px;
     box-sizing: border-box;
