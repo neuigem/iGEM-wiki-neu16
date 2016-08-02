@@ -215,6 +215,11 @@ h4 {
     }
     
     #teamphoto {margin:100px auto;}
+
+    #sponsors img {
+        max-height:80px;
+        margin:5px;
+    }
 }
 
 /*
