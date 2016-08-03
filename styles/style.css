@@ -18,10 +18,6 @@
     box-sizing: border-box;
 }
 
-.row {
-    background:#fff;
-}
-
 body {
     font-family:open sans;
 }
@@ -110,11 +106,14 @@ h4 {
 }
 
 #continue {
-    padding-bottom:100px;
+    position:absolute;
     color:#fff;
     text-align: center;
     font-size:50px;
-    margin-top:200px;
+    width:100%;
+    margin-left:-20px;
+    height:50px;
+    top:calc(100vh - 120px);
 }
 
 #continue a {color:#fff;text-decoration:none;}
@@ -129,13 +128,21 @@ h4 {
     padding:0 20px;
 }
 
+#projintro .row {
+/*    background:#333;*/
+}
+
+#projintro .col-md-8,  #projintro .col-md-4 {
+    background:#fff;
+}
+
 /*buttons to project page*/
 #aboutbuttons {
     text-align: center;
 }
 
 #aboutbuttons span {
-    margin-right:10px;
+    margin-right:5px;
 }
 
 #aboutbuttons a {
@@ -148,10 +155,14 @@ h4 {
 
 /*team section*/
 #teamphoto {
+    margin:auto;
+    padding-bottom:100px;
+}
+
+#teamphoto img {
     max-width: 100%;
     max-height: 100%;
-    margin:100px auto;
-    box-shadow:0 0 20px #ccc;
+    box-shadow:0 0 30px #ccc;
 }
 
 #readmore {
@@ -164,12 +175,13 @@ h4 {
 
 /*links to rest of wiki*/
 #sitemap {
-    background-image: url('http://unsplash.it/1400/800');
+    background-image: url('http://unsplash.it/2000/800');
+    background-size:cover;
     background-attachment: fixed;
 }
 
 #sitelinks {
-    padding-bottom:50px;
+    padding:100px 0;
     min-height:300px;
     color:#fff;
     text-align: center;
@@ -179,7 +191,6 @@ h4 {
 #sitelinks a {
     display:inline-block;
     border:3px solid #fff;
-   
     color:#fff;
     padding:10px 20px;
     margin:10px
@@ -187,6 +198,8 @@ h4 {
 
 #sitemap h3 {
     color:#fff;
+    margin-top:0px;
+    padding-top:0px;
     text-shadow: 1px 1px .2px #000;
 }
 
@@ -214,21 +227,21 @@ h4 {
 }
 
 /* hide components when screen is smaller*/
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 970px) {
 
     #bannercontent {
-        padding-top:80px;
+        padding-top:100px;
     }
 
     h1 {
         font-size:40px;
     }
     
-    #continue {
-        margin-top:80px;
+    h2  {
+        letter-spacing: 0px;
     }
     
-    #teamphoto {margin:100px auto;}
+    #teamphoto {margin:50px auto;}
 
     #sponsors img {
         max-height:80px;

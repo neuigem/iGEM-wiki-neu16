@@ -19,8 +19,4 @@ notes:
         - can import fonts w/ @import tag (ie: the old way)
         
 about section:
-We are Northeastern students hailing from a variety of departments within 
-the University, including bioengineering, chemical engineering, biology, 
-biochemistry, and computer science, and ranging in experience from first 
-years to veteran fifth years. something something shared interest/desire
-to learn and grow.
+We are Northeastern students hailing from a variety of departments within the University, including bioengineering, chemical engineering, biology, biochemistry, and computer science, and ranging in experience from first years to veteran fifth years. something something shared interest/desire to learn and grow.

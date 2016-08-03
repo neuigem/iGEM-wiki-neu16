@@ -59,8 +59,8 @@ padding-right:20px;">
                     <li><a href="/Team:Northeastern/Part_Collection">part collection</a></li>
                 </ul>
             </li>
-            <li><a href="/Team:Northeastern">safety</a></li>
-            <li><a href="/Team:Northeastern">attributions</a></li>
+            <li><a href="/Team:Northeastern/Safety">safety</a></li>
+            <li><a href="/Team:Northeastern/Attributions">attributions</a></li>
 
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">human practices <span class="caret"></span></a>
@@ -91,8 +91,7 @@ padding-right:20px;">
         
         
     <div class="container-fluid">
-       
-        
+
         <div class="row" id="banner">
             <div id="bannercontent">
                 <center>
@@ -104,8 +103,14 @@ padding-right:20px;">
                 </center>
             </div>
         </div>
-        <div class="row" id="projintro" style="padding-top:0px;">
-            <h3 style="padding-top:100px;">about this project</h3>
+
+        <div id="projintro">
+        <div class="row" style="padding-top:0px;">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h3 style="padding-top:100px;">about this project</h3>
+            </div>
+            <div class="col-md-2"></div>
         </div>
         <div class="row">
             <div class="col-md-2"></div>
@@ -116,17 +121,15 @@ padding-right:20px;">
             <div class="col-md-2"></div>
         </div>
 
-        <div class="row" style="margin-top:50px;margin-bottom:50px;">
+        <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <center><div class="fa fa-flask" id="icon"></div></center>
+            <div class="col-md-4" style="padding-top:50px;padding-bottom:50px;">
                 <h4>subproblem 1 header</h4>
                 <div class="content">
                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <center><div class="fa fa-flask" id="icon"></div></center>
+            <div class="col-md-4" style="padding-top:50px;padding-bottom:50px;">
                 <h4>subproblem 2 header</h4>
                 <div class="content">
                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
@@ -135,9 +138,9 @@ padding-right:20px;">
             <div class="col-md-2"></div>
         </div>
 
-        <div class="row" style="margin-bottom:100px;">
+        <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-md-8" style="padding-bottom:100px;">
                 <h4>our solution</h4>
                 <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                 <div id="aboutbuttons">
@@ -147,21 +150,26 @@ padding-right:20px;">
             </div>
             <div class="col-md-2"></div>
         </div>
+        </div><!--projintro-->
 
         <div class="row" id="teamintro" style="background:#eee;">
+
+                <h3>who we are</h3>
             <div class="col-md-2"></div>
             <div class="col-md-5">
                 <div class="content">
-                <h3>who we are</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <div id="readmore"><a href="/Team:Northeastern">Read more →</a></div>
+                    <div id="readmore"><a href="/Team:Northeastern/Team">Read more →</a></div>
                 </div>
 
             </div>
             <div class="col-md-3">
                 <!--replace with group photo when applicable-->
-                <center><img src="http://2016.igem.org/wiki/images/1/15/Northeastern_PCR_Protocol.jpeg" id="teamphoto"></center>
+                <center>
+<!--                    <img src="http://2016.igem.org/wiki/images/1/15/Northeastern_PCR_Protocol.jpeg" id="teamphoto">-->
+                    <div id="teamphoto"><img src="http://unsplash.it/800/500"></div>
+                </center>
             </div>
             <div class="col-md-12"></div>
         </div>
@@ -170,12 +178,12 @@ padding-right:20px;">
             
             <div class="col-md-12" id="sitelinks">
                 <h3>explore</h3>
-                <a href="/">team</a>
-                <a href="/">projects</a>
-                <a href="/">parts</a>
-                <a href="/">safety</a>
-                <a href="/">attributions</a>
-                <a href="/">human practices</a>
+                <a href="/Team:Northeastern/Team">team</a>
+                <a href="/Team:Northeastern/Description">projects</a>
+                <a href="/Team:Northeastern/Parts">parts</a>
+                <a href="/Team:Northeastern/Safety">safety</a>
+                <a href="/Team:Northeastern/Attributions">attributions</a>
+                <a href="/Team:Northeastern/Human_Practices">human practices</a>
             </div>
             
         </div>
