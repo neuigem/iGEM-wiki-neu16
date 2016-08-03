@@ -54,7 +54,8 @@ h1 {
 h2 {
     font-size: 20px;
     text-align:center;
-    color:#fff;
+    color:#aaa;
+    letter-spacing:2px;
 }
 
 /*section header*/
@@ -66,16 +67,14 @@ h3 {
     padding-bottom:20px;
 }
 
+/*section subheaders*/
 h4 {
     font-size: 20px;
     text-align: center;
     margin-bottom:20px;
 }
 
-.container, .container-fluid {
-    color:#555;
-}
-
+/*navigation bar*/
 .navbar-default {
     background-color: #fff;
     border: none;
@@ -86,6 +85,11 @@ h4 {
     border: none;
 }
 
+.container, .container-fluid {
+    color:#555;
+}
+
+/*banner*/
 #banner {
     position:relative;
     z-index: 0;
@@ -109,37 +113,45 @@ h4 {
     padding-bottom:100px;
     color:#fff;
     text-align: center;
-    margin-top:200px;
     font-size:50px;
+    margin-top:200px;
 }
 
 #continue a {color:#fff;text-decoration:none;}
 #continue a:hover {color:#fff;text-decoration:none;}
 
-#icon {
-    height:100px;
-    width:100px;
-    width:100px;
-    display:block;
-    margin-top:50px;
-}
-
-.section {
-/*    padding:50px;*/
-}
-
+/*main content*/
 .content {
-    max-width:550px;
     margin:auto;
     line-height: 170%;
     font-family: roboto;
     margin:20px auto;
+    padding:0 20px;
 }
 
+/*buttons to project page*/
+#aboutbuttons {
+    text-align: center;
+}
+
+#aboutbuttons span {
+    margin-right:10px;
+}
+
+#aboutbuttons a {
+    display:inline-block;
+    padding:10px;
+    border:3px solid #ccc;
+    width:100px;
+    margin:0 20px;
+}
+
+/*team section*/
 #teamphoto {
     max-width: 100%;
     max-height: 100%;
     margin:100px auto;
+    box-shadow:0 0 20px #ccc;
 }
 
 #readmore {
@@ -150,11 +162,11 @@ h4 {
 
 #readmore a {color:#3875A2;}
 
+/*links to rest of wiki*/
 #sitemap {
     background-image: url('http://unsplash.it/1400/800');
     background-attachment: fixed;
 }
-
 
 #sitelinks {
     padding-bottom:50px;
@@ -178,6 +190,18 @@ h4 {
     text-shadow: 1px 1px .2px #000;
 }
 
+/*sponsor images*/
+#sponsors {
+    padding:50px 0;
+}
+
+#sponsors img {
+    max-height:150px;
+    max-width:100%;
+    margin:20px;
+}
+
+/*footer*/
 #footer {
     background:#333;
     text-align: center;
@@ -187,16 +211,6 @@ h4 {
 
 #footer a {
     color:#fff;
-}
-
-#sponsors {
-    padding:50px 0;
-}
-
-#sponsors img {
-    max-height:150px;
-    max-width:100%;
-    margin:20px;
 }
 
 /* hide components when screen is smaller*/
@@ -220,38 +234,4 @@ h4 {
         max-height:80px;
         margin:5px;
     }
-}
-
-/*
-#sitemap img {
-    width:100%;
-    display:block;
-    margin-bottom:30px;;
-}
-
-#header {
-    position:absolute;
-    display:inline-block;
-    width:calc(100% - 30px);
-    text-align: center;
-    color:#fff;
-    background: rgba(0, 0, 0, 0.8);
-    height:50px;
-    margin-top:-80px;
-    line-height:50px;
-}
-*/
-
-#subicon {
-    font-family: fontawesome;
-    height:100px;
-    width:100px;
-    border-radius: 100px;
-    box-sizing: border-box;
-    padding:20px;
-    font-size: 60px;
-    text-align: center;
-    color:#fff;
-    background:#333;
-    margin-bottom:30px;
 }
