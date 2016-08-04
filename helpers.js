@@ -175,8 +175,7 @@
     };
 
     navigation = function(field, mode, active1, active2, recursed) {
-      var active, actives, arg, content, i, icon, isActive, item, j, k, l, len, len1, newItem, ref, value;
-      console.log("here1");
+      var active, actives, arg, content, i, isActive, item, j, k, l, len, len1, newItem, ref, value;
       content = "<ul>\n";
       actives = new Array();
       for (i = j = 0, len = arguments.length; j < len; i = ++j) {
@@ -187,10 +186,7 @@
       }
       for (item in field) {
         value = field[item];
-        console.log("here3", item, value);
         isActive = false;
-        icon = "";
-        console.log("actives");
         for (k = 0, len1 = actives.length; k < len1; k++) {
           active = actives[k];
           if (item === active) {
@@ -212,17 +208,15 @@
           }
           content += navigation(value, mode, active1, active2, true);
         } else {
-          console.log("handling a string");
           if (isActive) {
-            content += "<li class=\"active\"><a href=\"" + (link(item, mode)) + "\"><span>" + value + "</span>" + icon + "</a></li>\n";
+            content += "<li class=\"active\"><a href=\"" + (link(item, mode)) + "\"><span>" + value + "</span></a></li>\n";
           } else {
-            content += "<li><a href=\"" + (link(item, mode)) + "\"><span>" + value + "</span>" + icon + "</a></li>\n";
+            content += "<li><a href=\"" + (link(item, mode)) + "\"><span>" + value + "</span></a></li>\n";
           }
           content += "</li>\n";
         }
       }
       content += "</ul>\n";
-      console.log("here2");
       return content;
     };
 

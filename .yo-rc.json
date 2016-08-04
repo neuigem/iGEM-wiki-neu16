@@ -1,8 +1,8 @@
 {
   "generator-igemwiki": {
-    "year": "2016",
+    "year": 2016,
     "teamName": "Northeastern",
     "repo": "https://github.com/omwan/iGEM-wiki-neu16",
-    "author": "Olivia Wan <wan.o@husky.neu.edu>"
+    "author": "Olivia Wan <wan.o@husk.neu.edu>"
   }
 }

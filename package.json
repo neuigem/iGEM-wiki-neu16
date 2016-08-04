@@ -11,7 +11,7 @@
         "type": "git",
         "url": "https://github.com/omwan/iGEM-wiki-neu16"
     },
-    "author": "Olivia Wan <wan.o@husky.neu.edu>",
+    "author": "Olivia Wan <wan.o@husk.neu.edu>",
     "license": "MIT",
     "homepage": "https://github.com/omwan/iGEM-wiki-neu16#readme",
     "devDependencies": {

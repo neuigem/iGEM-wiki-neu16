@@ -138,9 +138,7 @@ compileAllHbs = (templateData, dest) ->
     hbsOptions =
         batch: [paths.partials],
         helpers: helpers
-    
-#    console.log(templateData)
-        
+
     # Return a `combiner` stream. Series of pipes will not work here.
     return combiner(
         gulp.src(globs.hbs),

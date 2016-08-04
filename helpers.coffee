@@ -155,25 +155,21 @@ class Helpers
                 return "#{linkName}.html"
 
     navigation = (field, mode, active1, active2, recursed) ->
-        console.log("here1")
         content = "<ul>\n"
 
         actives = new Array()
-        
         for arg,i in arguments
             if i >= 2
                 actives.push(arg)
-        
+
         for item, value of field
-            console.log("here3",  item, value)
             isActive = false
 
-#            if recursed
-            icon = ""
-#            else
-#                icon = "<i class=\"fa #{templateData.icons[item]}\"></i>"
-            
-            console.log("actives")
+            # if recursed
+            #     icon = ""
+            # else
+            #     icon = "<i class=\"fa #{templateData.icons[item]}\"></i>"
+ 
             for active in actives
                 if item is active
                     isActive = true
@@ -195,20 +191,18 @@ class Helpers
                 content += navigation(value, mode, active1, active2, true)
                 # content += "</div></li>"
             else
-                console.log("handling a string")
                 # if item is 'index'
                 #     item = 'home'
                 if isActive
-                    content += "<li class=\"active\"><a href=\"#{link(item, mode)}\"><span>#{value}</span>#{icon}</a></li>\n"
+                    content += "<li class=\"active\"><a href=\"#{link(item, mode)}\"><span>#{value}</span></a></li>\n"
                     # content += "<li class=\"active\"><a href=\"#{link(item, mode)}\"><i class=\"fa #{templateData.icons[item]}\"></i></a>"
                 else
-                    content += "<li><a href=\"#{link(item, mode)}\"><span>#{value}</span>#{icon}</a></li>\n"
+                    content += "<li><a href=\"#{link(item, mode)}\"><span>#{value}</span></a></li>\n"
                     # content += "<li><a href=\"#{link(item, mode)}\"><i class=\"fa #{templateData.icons[item]}\"></i></a>"
                 # content += "<span>#{item}</span>"
                 content += "</li>\n"
         content += "</ul>\n"
-        
-        console.log("here2")
+ 
         return content
 
     navigationWrapper: (mode, active1, active2) ->
