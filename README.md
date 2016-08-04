@@ -1,4 +1,4 @@
-# iGEM-wiki-neu16
-Wiki for Northeastern University's 2016 iGEM Team
+# iGEM Northeastern 2016 Wiki
 
-See it at: http://2016.igem.org/Team:Northeastern
+iGEM Wiki built with [generator-igemwiki](https://github.com/igemuoftATG/generator-igemwiki).
+
