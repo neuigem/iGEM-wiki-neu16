@@ -1,6 +1,6 @@
 ## Project Description
 
-The University of Toronto will be developing a portable synthetic biological sensor for gold, and a deep neural network for discovering novel genes involved in gold biomineralization.
+The University of Toronto will be designing a portable synthetic biological sensor for gold, and a deep neural network for discovering novel genes involved in gold biomineralization.
 
 Biological methods can be used to detect metal ions, complexes and nanoparticles. Biosensing refers to a collection of techniques which utilize existing biological pathways and complexes to detect specific metals in various samples, such as those from soil and drinking water. Biosensing has been found to occur in relation to iron, zinc, copper, silver, gold and cadmium.
 
