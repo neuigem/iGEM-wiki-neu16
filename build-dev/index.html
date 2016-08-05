@@ -19,103 +19,236 @@
 
 	<body></body>
 
+    <nav class="navbar navbar-default navbar-fixed-top" style="border-top:18px solid #000;">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand page-scroll" href="#top" style="padding:0px 20px;line-height:50px;">Northeastern University</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="
+padding-right:20px;">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/Team:Northeastern">home</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">team <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/Team:Northeastern/Team">team</a></li>
+                    <li><a href="/Team:Northeastern/Collaborations">collaborations</a></li>
+                    <li><a href="#">notebook</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">project <span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="/Team:Northeastern/Description">description</a></li>
+                    <li><a href="/Team:Northeastern/Design">design</a></li>
+                    <li><a href="/Team:Northeastern/Experiments">experiments</a></li>
+                    <li><a href="/Team:Northeastern/Proof">proof</a></li>
+                    <li><a href="/Team:Northeastern/Results">results</a></li>
+                    <li><a href="/Team:Northeastern/Notebook">notebook</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">parts <span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="/Team:Northeastern/Parts">parts</a></li>
+                    <li><a href="/Team:Northeastern/Basic_Parts">basic parts</a></li>
+                    <li><a href="/Team:Northeastern/Composite_Parts">composite parts</a></li>
+                    <li><a href="/Team:Northeastern/Part_Collection">part collection</a></li>
+                </ul>
+            </li>
+            <li><a href="/Team:Northeastern/Safety">safety</a></li>
+            <li><a href="/Team:Northeastern/Attributions">attributions</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">human practices <span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="/Team:Northeastern/Human_Practices">human practices</a></li>
+                    <li><a href="/Team:Northeastern/HP/Silver">silver</a></li>
+                    <li><a href="/Team:Northeastern/HP/Gold">gold</a></li>
+                    <li><a href="/Team:Northeastern/Integrated_Practices">integrated practices</a></li>
+                    <li><a href="/Team:Northeastern/Engagement">Engagement</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">awards <span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="/Team:Northeastern/Entrepeneurship">entrepeneurship</a></li>
+                    <li><a href="/Team:Northeastern/Hardware">hardware</a></li>
+                    <li><a href="/Team:Northeastern/Software">software</a></li>
+                    <li><a href="/Team:Northeastern/Measurement">measurement</a></li>
+                    <li><a href="/Team:Northeastern/Model">model</a></li>
+                </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>  
 
 </html>
 
 <html>
-<!-- <a href="images/igem.png" > direct image linking </a>
 
-<img src="images/igem_500w.png" />
+    <div class="container-fluid">
+        <div class="row" id="banner">
 
-<p>Inline <strong>markdown</strong>!</p>
-<p>NORTHEASTERN</p>
-<p>More working md?</p>
-<ul>
-<li>yes</li>
-<li>no</li>
-</ul>
- -->
+            <div id="continue"> <a href="#projintro" class="fa fa-chevron-down"></a></div>
 
-<div id="navigation">
-<ul>
-<li><a href="index.html"><span>home</span></a></li>
-</li>
-<li><a href="#"><span>team</span></a>
-<ul>
-<li><a href="team.html"><span>team</span></a></li>
-</li>
-<li><a href="collaborations.html"><span>collaborations</span></a></li>
-</li>
-</ul>
-<li><a href="#"><span>project</span></a>
-<ul>
-<li><a href="description.html"><span>description</span></a></li>
-</li>
-<li><a href="design.html"><span>design</span></a></li>
-</li>
-<li><a href="experiments.html"><span>experiments</span></a></li>
-</li>
-<li><a href="proof.html"><span>proof</span></a></li>
-</li>
-<li><a href="demonstrate.html"><span>demonstrate</span></a></li>
-</li>
-<li><a href="results.html"><span>results</span></a></li>
-</li>
-<li><a href="notebook.html"><span>notebook</span></a></li>
-</li>
-</ul>
-<li><a href="#"><span>parts</span></a>
-<ul>
-<li><a href="parts.html"><span>parts</span></a></li>
-</li>
-<li><a href="basic_part.html"><span>basic_part</span></a></li>
-</li>
-<li><a href="composite_part.html"><span>composite_part</span></a></li>
-</li>
-<li><a href="part_collection.html"><span>part_collection</span></a></li>
-</li>
-</ul>
-<li><a href="safety.html"><span>safety</span></a></li>
-</li>
-<li><a href="attributions.html"><span>attributions</span></a></li>
-</li>
-<li><a href="#"><span>human_practices</span></a>
-<ul>
-<li><a href="human_practices.html"><span>human_practices</span></a></li>
-</li>
-<li><a href="silver.html"><span>silver</span></a></li>
-</li>
-<li><a href="gold.html"><span>gold</span></a></li>
-</li>
-<li><a href="integrated_practices.html"><span>integrated_practices</span></a></li>
-</li>
-<li><a href="engagement.html"><span>engagement</span></a></li>
-</li>
-</ul>
-<li><a href="#"><span>awards</span></a>
-<ul>
-<li><a href="entrepreneurship.html"><span>entrepreneurship</span></a></li>
-</li>
-<li><a href="hardware.html"><span>hardware</span></a></li>
-</li>
-<li><a href="software.html"><span>software</span></a></li>
-</li>
-<li><a href="measurement.html"><span>measurement</span></a></li>
-</li>
-<li><a href="model.html"><span>model</span></a></li>
-</li>
-</ul>
-</ul>
-</div>
-<div class="content">
-	<div class="content" id="content-main"><div class="row"><div class="col col-lg-8 col-md-12"><div class="content-main"><h2 id="project-description">Project Description</h2>
-<p>The University of Toronto will be designing a portable synthetic biological sensor for gold, and a deep neural network for discovering novel genes involved in gold biomineralization.</p>
-<p>Biological methods can be used to detect metal ions, complexes and nanoparticles. Biosensing refers to a collection of techniques which utilize existing biological pathways and complexes to detect specific metals in various samples, such as those from soil and drinking water. Biosensing has been found to occur in relation to iron, zinc, copper, silver, gold and cadmium.</p>
-<p>Here, we propose an environmentally-friendly approach to biosensing through design and implementation of novel synthetic biology solutions for the mining industry. By creating cell-free paper-based biosensors, we intend to develop a quick, easy and affordable method for detection of gold in soil samples. Our team plans on tackling through use of a transcriptional activator, GolS, and its variants, which induce their associated reporter genes in the presence of gold ions. These reporter genes will be selected to act as visual indicators. Our computational team will augment this project by engineering a smartphone application for colorimetric analysis. This will be done using the smartphone’s camera input of the visual indicators to estimate the amount of gold present in a sample. The computational team will also be developing a pipeline to identify gene clusters related to a given function of interest. This data mining module will allow its user to search for homologous gene clusters as potential gold resistant or accumulation genes like alternatives to the del cluster.</p>
-</div></div><div id="tableofcontents" class="tableofcontents affix sidebar col-lg-4 hidden-xs hidden-sm hidden-md visible-lg-3"><ul class="nav"></div></div></div>
-</div>
+            <div id="bannercontent" style="display:table;height:100%;width:100%;">
+                <div style="display:table-cell;vertical-align:middle;margin-top:-80px;">
+                    <h1>Northeastern University</h1>
+                    <h2>Wastewater Treatment: Energy and Information</h2>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="projintro">
+        <div class="row" style="padding-top:0px;">
+<!--            <div class="col-md-2"></div>-->
+            <div class="col-md-12">
+                <h3 style="padding-top:100px;">about this project</h3>
+            </div>
+<!--            <div class="col-md-2"></div>-->
+        </div>
+        <div class="row">
+<!--            <div class="col-md-2"></div>-->
+            <div class="col-md-12">
+                <h4>main problem</h4>
+                <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+<!--            <div class="col-md-2"></div>-->
+        </div>
+
+        <div class="row">
+<!--            <div class="col-md-2"></div>-->
+            <div class="col-md-6" style="padding-top:50px;padding-bottom:50px;">
+                <h4>subproblem 1 header</h4>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="col-md-6" style="padding-top:50px;padding-bottom:50px;">
+                <div class="content"><img src="http://unsplash.it/800/500"></div>
+            </div>
+<!--            <div class="col-md-2"></div>-->
+        </div>
+
+        <div class="row">
+<!--            <div class="col-md-2"></div>-->
+            <div class="col-md-6" style="padding-top:50px;padding-bottom:50px;">
+                <div class="content"><img src="http://unsplash.it/800/500"></div>
+            </div>
+            <div class="col-md-6" style="padding-top:50px;padding-bottom:50px;">
+                <h4>subproblem 2 header</h4>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+<!--            <div class="col-md-2"></div>-->
+        </div>
+
+        <div class="row">
+<!--            <div class="col-md-2"></div>-->
+            <div class="col-md-12" style="padding-bottom:100px;">
+                <h4>our solution</h4>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="aboutbuttons">
+                    <a href="/"><span class="fa fa-wrench"></span>MFC</a>
+                    <a href="/"><span class="fa fa-flask"></span>CRISPR</a>
+                </div>
+            </div>
+<!--            <div class="col-md-2"></div>-->
+        </div>
+        </div><!--projintro-->
+
+        <div id="teamintro">
+            <h3>who we are</h3>
+        <div class="row">
+
+                
+            <div class="col-md-7">
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div id="readmore"><a href="/Team:Northeastern/Team">Read more →</a></div>
+                </div>
+
+            </div>
+            <div class="col-md-5">
+                <!--replace with group photo when applicable-->
+                <center>
+<!--                    <img src="http://2016.igem.org/wiki/images/1/15/Northeastern_PCR_Protocol.jpeg" id="teamphoto">-->
+                    <div id="teamphoto"><img src="http://unsplash.it/800/500"></div>
+                </center>
+            </div>
+<!--            <div class="col-md-1"></div>-->
+        </div>
+        </div><!--teamintro-->
+        
+        <div class="row" id="sitemap">
+            
+            <div class="col-md-12" id="sitelinks">
+                <h3>explore</h3>
+                <a href="/Team:Northeastern/Team">team</a>
+                <a href="/Team:Northeastern/Description">projects</a>
+                <a href="/Team:Northeastern/Parts">parts</a>
+                <a href="/Team:Northeastern/Safety">safety</a>
+                <a href="/Team:Northeastern/Attributions">attributions</a>
+                <a href="/Team:Northeastern/Human_Practices">human practices</a>
+            </div>
+            
+        </div>
+        
+        <div class="row" id="sponsors">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <center>
+                    <a href="http://compasstherapeutics.com/"><img src="http://2016.igem.org/wiki/images/3/3c/T--Northeastern--compass.png"></a>
+                    <a href="https://www.idtdna.com/site"><img src="http://2016.igem.org/wiki/images/0/0a/T--Northeastern--idt.png"></a>
+                    <a href="https://www.neb.com/"><img src="http://2016.igem.org/wiki/images/7/7f/T--Northeastern--neb.jpg"></a>
+<!--
+                    <a href="http://www.northeastern.edu/cos/"><img src="http://2016.igem.org/wiki/images/5/5d/T--Northeastern--COS.png"></a>
+                    <a href="http://www.bioe.neu.edu/"><img src="http://2016.igem.org/wiki/images/e/e8/T--Northeastern--bioe.png"></a>
+                    <a href="http://www.che.neu.edu/"><img src="http://2016.igem.org/wiki/images/a/aa/T--Northeastern--cheme.png"></a>
+-->
+                </center>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div><!--container-->
+    
 </html>
 <html>
+    
+    <div id="footer">
+            <a href="http://www.northeastern.edu/">Northeastern University, Boston MA</a> &middot;
+            <a href="https://github.com/omwan/iGEM-wiki-neu16">Github</a> &middot;
+            <a href="#">back to top</a>
+        </div>
+    
 	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
 	<!-- bower:js -->
 	<script src="bower_components\jquery\dist\jquery.js"></script>
@@ -123,7 +256,10 @@
 	<script src="bower_components\highlightjs\highlight.pack.js"></script>
 	<!-- endbower -->
 	<script src="js/bundle.js"></script>
+	<script src="js/declare.js"></script>
+	<script src="js/directives.js"></script>
+	<script src="js/init.js"></script>
 	<script src="js/maps"></script>
+	<script src="js/services.js"></script>
 	
 </html>
-

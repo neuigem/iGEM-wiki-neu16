@@ -1,25 +1,142 @@
 {{template templates.head mode}}
 <html>
-<!-- <a href="{{image "igem.png" "directlink" mode}}" > direct image linking </a>
 
-<img src="{{image "igem_500w.png" "directlink" mode}}" />
+    <div class="container-fluid">
+        <div class="row" id="banner">
 
-{{#markdownHere "
+            <div id="continue"> <a href="#projintro" class="fa fa-chevron-down"></a></div>
 
-Inline **markdown**!
+            <div id="bannercontent" style="display:table;height:100%;width:100%;">
+                <div style="display:table-cell;vertical-align:middle;margin-top:-80px;">
+                    <h1>Northeastern University</h1>
+                    <h2>Wastewater Treatment: Energy and Information</h2>
+                </div>
+            </div>
 
-{{capitals teamName}}
+        </div>
 
-More working md?
+        <div id="projintro">
+        <div class="row" style="padding-top:0px;">
+<!--            <div class="col-md-2"></div>-->
+            <div class="col-md-12">
+                <h3 style="padding-top:100px;">about this project</h3>
+            </div>
+<!--            <div class="col-md-2"></div>-->
+        </div>
+        <div class="row">
+<!--            <div class="col-md-2"></div>-->
+            <div class="col-md-12">
+                <h4>main problem</h4>
+                <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+<!--            <div class="col-md-2"></div>-->
+        </div>
 
-* yes
-* no
+        <div class="row">
+<!--            <div class="col-md-2"></div>-->
+            <div class="col-md-6" style="padding-top:50px;padding-bottom:50px;">
+                <h4>subproblem 1 header</h4>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-"}}{{/markdownHere}} -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="col-md-6" style="padding-top:50px;padding-bottom:50px;">
+                <div class="content"><img src="http://unsplash.it/800/500"></div>
+            </div>
+<!--            <div class="col-md-2"></div>-->
+        </div>
 
-{{navigation mode "foo"}}
-<div class="content">
-	{{markdown markdown.home}}
-</div>
+        <div class="row">
+<!--            <div class="col-md-2"></div>-->
+            <div class="col-md-6" style="padding-top:50px;padding-bottom:50px;">
+                <div class="content"><img src="http://unsplash.it/800/500"></div>
+            </div>
+            <div class="col-md-6" style="padding-top:50px;padding-bottom:50px;">
+                <h4>subproblem 2 header</h4>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+<!--            <div class="col-md-2"></div>-->
+        </div>
+
+        <div class="row">
+<!--            <div class="col-md-2"></div>-->
+            <div class="col-md-12" style="padding-bottom:100px;">
+                <h4>our solution</h4>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div id="aboutbuttons">
+                    <a href="/"><span class="fa fa-wrench"></span>MFC</a>
+                    <a href="/"><span class="fa fa-flask"></span>CRISPR</a>
+                </div>
+            </div>
+<!--            <div class="col-md-2"></div>-->
+        </div>
+        </div><!--projintro-->
+
+        <div id="teamintro">
+            <h3>who we are</h3>
+        <div class="row">
+
+                
+            <div class="col-md-7">
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div id="readmore"><a href="/Team:Northeastern/Team">Read more →</a></div>
+                </div>
+
+            </div>
+            <div class="col-md-5">
+                <!--replace with group photo when applicable-->
+                <center>
+<!--                    <img src="http://2016.igem.org/wiki/images/1/15/Northeastern_PCR_Protocol.jpeg" id="teamphoto">-->
+                    <div id="teamphoto"><img src="http://unsplash.it/800/500"></div>
+                </center>
+            </div>
+<!--            <div class="col-md-1"></div>-->
+        </div>
+        </div><!--teamintro-->
+        
+        <div class="row" id="sitemap">
+            
+            <div class="col-md-12" id="sitelinks">
+                <h3>explore</h3>
+                <a href="/Team:Northeastern/Team">team</a>
+                <a href="/Team:Northeastern/Description">projects</a>
+                <a href="/Team:Northeastern/Parts">parts</a>
+                <a href="/Team:Northeastern/Safety">safety</a>
+                <a href="/Team:Northeastern/Attributions">attributions</a>
+                <a href="/Team:Northeastern/Human_Practices">human practices</a>
+            </div>
+            
+        </div>
+        
+        <div class="row" id="sponsors">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <center>
+                    <a href="http://compasstherapeutics.com/"><img src="http://2016.igem.org/wiki/images/3/3c/T--Northeastern--compass.png"></a>
+                    <a href="https://www.idtdna.com/site"><img src="http://2016.igem.org/wiki/images/0/0a/T--Northeastern--idt.png"></a>
+                    <a href="https://www.neb.com/"><img src="http://2016.igem.org/wiki/images/7/7f/T--Northeastern--neb.jpg"></a>
+<!--
+                    <a href="http://www.northeastern.edu/cos/"><img src="http://2016.igem.org/wiki/images/5/5d/T--Northeastern--COS.png"></a>
+                    <a href="http://www.bioe.neu.edu/"><img src="http://2016.igem.org/wiki/images/e/e8/T--Northeastern--bioe.png"></a>
+                    <a href="http://www.che.neu.edu/"><img src="http://2016.igem.org/wiki/images/a/aa/T--Northeastern--cheme.png"></a>
+-->
+                </center>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div><!--container-->
+    
 </html>
 {{template templates.footer mode}}

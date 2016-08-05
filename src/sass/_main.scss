@@ -1,13 +1,3 @@
-// I always set these to 100%
-html, body {
-    height : 100%;
-    width  : 100%;
-}
-
-body {
-    background-color: $bodyBG;
-}
-
 @font-face {
     font-family:open sans;
     src: url('../fonts/OpenSans-Regular.ttf ');
@@ -18,278 +8,258 @@ body {
     src: url('../fonts/Roboto-Regular.ttf');
 }
 
-.content {
-    // Any overflow other than 'visible' triggers a block formatting context.
-    // BFCs don't allow descendant floats to escape them, nor do they allow
-    // sibling/ancestor floats to intrude into them. The net effect here is that
-    // the floated div will do it's thing, then the second div will be an
-    // ordinary block, taking up all available width except that occupied by the
-    // float. This trick is used in conjunction with #navigation{float: left;}
-    // see: http://stackoverflow.com/questions/1260122/expand-div-to-take-remaining-width
-    background-color: $contentBG;
-    margin-left: $navbarIconWidth;
-    min-height: 100%;
-    overflow: hidden;
-    // padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
 
-    .tableofcontents {
-        list-style: none;
-        margin-top: 20px;
-        max-height: 100%;
-        overflow-y: scroll;
-        // position: fixed;
-        // right: 0;
-        // width: 400px;
-
-        li {
-            a {
-                border-left: $sidebarBorderThickness solid transparent;
-                color: $sidebarInactiveColor;
-                padding-left: $sidebarPaddingLevel1;
-                text-decoration: none;
-            }
-
-            ul {
-                display: none;
-                list-style: none;
-                padding: 0;
-
-                li {
-                    a {
-                        padding-left: $sidebarPaddingLevel2;
-                    }
-
-                    ul {
-                        display: none;
-
-                        li a {
-                            padding-left: $sidebarPaddingLevel3;
-                        }
-                    }
-
-                    &:hover {
-                        a {
-                            border-left: $sidebarBorderThickness solid rgba($sidebarBorderColor2, 0.5);
-                        }
-                    }
-                }
-            }
-
-            &:hover {
-                a {
-                    border-left: $sidebarBorderThickness solid rgba($sidebarBorderColor1, 0.5);
-                }
-
-                ul {
-                    display: block;
-
-                    li {
-                        a {
-                            border-left: $sidebarBorderThickness solid transparent;
-                        }
-
-                        ul {
-                            display: none;
-                        }
-
-                        &:hover {
-                            a {
-                                border-left: $sidebarBorderThickness solid rgba($sidebarBorderColor2, 0.5);
-                            }
-
-                            ul {
-                                display: block;
-
-                                li {
-                                    a {
-                                        border-left: $sidebarBorderThickness solid transparent;
-                                        color: $sidebarInactiveColor;
-                                    }
-
-                                    &:hover {
-                                        a {
-                                            border-left: $sidebarBorderThickness solid rgba($sidebarBorderColor3, 0.5);
-                                        }
-                                    }
-
-                                    &.active {
-                                        a {
-                                            border-left: $sidebarBorderThickness solid $sidebarBorderColor;
-                                            color: $sidebarActiveColor;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            &.active {
-                a {
-                    border-left: $sidebarBorderThickness solid $sidebarBorderColor1;
-                    color: $sidebarActiveColor;
-                }
-
-                ul {
-                    display: block;
-
-                    li {
-                        a {
-                            border-left: $sidebarBorderThickness solid transparent;
-                            color: $sidebarInactiveColor;
-                        }
-
-                        ul {
-                            display: none;
-                        }
-
-                        &:hover {
-                            ul {
-                                display: block;
-                            }
-                        }
-
-                        &.active {
-                            a {
-                                border-left: $sidebarBorderThickness solid $sidebarBorderColor2;
-                                color: $sidebarActiveColor;
-                            }
-
-                            ul {
-                                display: block;
-
-                                li {
-                                    a {
-                                        border-left: $sidebarBorderThickness solid transparent;
-                                        color: $sidebarInactiveColor;
-                                    }
-
-                                    &.active {
-                                        a {
-                                            border-left: $sidebarBorderThickness solid $sidebarBorderColor3;
-                                            color: $sidebarActiveColor;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .content-main {
-        // float: left;
-        @include box-shadow(0px 2px 4px 2px rgba(0, 0, 0, 0.5));
-        background-color: $white-1;
-//        font-family: 'proxima-nova', sans-serif;
-        font-family: roboto;
-        margin: 0 auto;
-        max-width: 640px;
-        padding: 20px;
-    }
+@font-face {
+    font-family:fontawesome;
+    src: url('../fonts/FontAwesome.otf');
 }
 
-#content-main {
-    // @include box-shadow(0px 2px 4px 2px rgba(0, 0, 0, 0.5));
-    background-image: url('http://2015.igem.org/wiki/images/6/67/Toronto_2015_subtle-pattern-10.jpg');
+.row * {
+    box-sizing: border-box;
 }
 
-// Navigation styles
-// We have a ul of li > a's, some of which may contain another ul of li > a's
-#navigation {
-    float: left;
-    // By setting display to inline-block, the div will expand its width
-    // based on the contents. i.e. we can change the font size and this
-    // will automatically readjust.
-    display: inline-block;
-
-    ul {
-        margin: 0;
-        padding: 0;
-
-        li {
-            position: relative;
-            display: block;
-            width: 100%;
-            list-style: none;
-            text-align: center;
-
-            a {
-                display: block;
-                text-transform: capitalize;
-                text-decoration: none;
-                padding: 10px;
-                padding-left: 20px;
-                padding-right: 20px;
-                color: $navLinkColour;
-                background-color: $navLinkBG;
-                @include transition(all 200ms ease);
-            }
-
-            ul {
-                // Hide inner navs offscreen for now
-                position: absolute;
-                left: -9001px;
-            }
-
-            &:hover {
-                a {
-                    color: $navLinkOuterHoverColor;
-                    background: $navLinkOuterHoverBG;
-                }
-
-                ul {
-                    left: 100%;
-                    top: 0;
-
-                    a:hover {
-                        color: $navLinkInnerHoverColour;
-                    }
-
-                    li:hover a {
-                        background: $navLinkInnerHoverBG;
-                    }
-                }
-            }
-
-            &.active {
-                a {
-                    background-color: $navLinkActiveBG;
-                    color: $navLinkActiveOuterColour;
-                }
-
-                ul li {
-                    a {
-                        background-color: $navLinkOuterHoverBG;
-                        color: $navLinkColour;
-                    }
-
-                    &.active a {
-                        background-color: $navLinkActiveInnerBG;
-                        color: $navLinkActiveInnerColour;
-                    }
-                }
-            }
-        }
-    }
+p {
+    line-height: inherit;
+    margin: inherit;
 }
 
-.image-wrapper {
+body {
+    font-family:open sans;
+}
+
+html, body {
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width:100%;
+    box-shadow:0 0 30px #aaa;
+}
+
+a, a:hover {
+    color:#aaa;
+    text-decoration: none;
+    -webkit-transition:all .5s ease;
+    -moz-transition:all .5s ease;
+    -o-transition:all .5s ease;
+    transition:all .5s ease-in-out;
+}
+
+/* main title */
+h1 {
+    font-size:60px;
+    font-weight:bold;
+    text-align:center;
+    color:#fff;
+    text-shadow: 1px 1px .2px #000;
+    letter-spacing: 3px;
+    border-bottom:none;
+}
+
+/*main subtitle*/
+h2 {
+    font-size: 20px;
+    text-align:center;
+    color:#ccc;
+    letter-spacing:2px;
+}
+
+/*section header*/
+h3 {
+    text-align:center;
+    font-size:30px;
+    letter-spacing: 2px;
+    padding-top:50px;
+    padding-bottom:20px;
+}
+
+/*section subheaders*/
+h4 {
+    font-size: 20px;
     text-align: center;
+    margin-bottom:20px;
+}
 
-    img {
-        @include border-radius(5px);
-        // @include box-shadow(0px 2px 4px 2px rgba(0, 0, 0, 0.5));
-        background-color: $imageBG;
-        // border-bottom: 2px solid darken($grey-200, 15%);
-        height: auto;
-        border: 5px solid $imageBG;
-        // padding: 5px;
-        width: 50%;
-	}
+#continue {
+    position:absolute;
+    color:#fff;
+    text-align: center;
+    font-size:50px;
+    width:100%;
+    height:50px;
+    top:calc(100vh - 120px);
+    text-shadow: 1px 1px .2px #000;
+}
+
+/*navigation bar*/
+.navbar-default {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 0 10px #555;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.container, .container-fluid {
+    color:#555;
+    padding:0px;
+}
+
+/*banner*/
+#banner {
+    position:relative;
+    z-index: 0;
+    background:url('https://unsplash.it/1920/900');
+    background-color:#aaa;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#bannercontent {
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    margin:auto;
+}
+
+#continue a {color:#fff;text-decoration:none;}
+#continue a:hover {color:#fff;text-decoration:none;}
+
+/*main content*/
+.content {
+    margin:auto;
+    line-height: 170%;
+    font-family: roboto;
+    margin:20px auto;
+    padding:0 20px;
+}
+
+#projintro .row, #teamintro .row {
+    max-width:1200px;
+    margin:auto;
+}
+
+#projintro .col-md-8,  #projintro .col-md-4 {
+    background:#fff;
+}
+
+/*buttons to project page*/
+#aboutbuttons {
+    text-align: center;
+}
+
+#aboutbuttons span {
+    margin-right:5px;
+}
+
+#aboutbuttons a {
+    display:inline-block;
+    padding:10px;
+    border:3px solid #ccc;
+    width:100px;
+    margin:0 20px;
+}
+
+/*team section*/
+#teamintro {
+    background:#eee;
+    margin:0 -15px;
+}
+
+#teamphoto {
+    margin:auto;
+    padding-bottom:100px;
+}
+
+#readmore {
+    font-size:18px;
+    margin-top:10px;
+    text-align: center;
+}
+
+#readmore a {color:#3875A2;}
+
+/*links to rest of wiki*/
+#sitemap {
+    background-image: url('http://unsplash.it/2000/800');
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+#sitelinks {
+    padding:100px 0;
+    min-height:300px;
+    color:#fff;
+    text-align: center;
+    background:rgba(0, 0, 0, 0.6);
+}
+
+#sitelinks a {
+    display:inline-block;
+    border:3px solid #fff;
+    color:#fff;
+    padding:10px 20px;
+    margin:10px
+}
+
+#sitemap h3 {
+    color:#fff;
+    margin-top:0px;
+    padding-top:0px;
+    text-shadow: 1px 1px .2px #000;
+}
+
+/*sponsor images*/
+#sponsors {
+    padding:50px 0;
+}
+
+#sponsors img {
+    max-height:150px;
+    max-width:100%;
+    margin:20px;
+    box-shadow: none;
+}
+
+/*footer*/
+#footer {
+    background:#333;
+    text-align: center;
+    color:#fff;
+    line-height: 50px;
+}
+
+#footer a {
+    color:#fff;
+}
+
+/* hide components when screen is smaller*/
+@media screen and (max-width: 970px) {
+
+    #bannercontent {
+        padding-top:100px;
+    }
+
+    h1 {
+        font-size:40px;
+    }
+    
+    h2  {
+        letter-spacing: 0px;
+    }
+    
+    #teamphoto {margin:50px auto;}
+
+    #sponsors img {
+        max-height:80px;
+        margin:5px;
+    }
+
+    #continue {
+        top:calc(100vh - 80px);
+    }
 }

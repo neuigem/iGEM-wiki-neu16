@@ -19,6 +19,85 @@
 
 	<body></body>
 
+    <nav class="navbar navbar-default navbar-fixed-top" style="border-top:18px solid #000;">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand page-scroll" href="#top" style="padding:0px 20px;line-height:50px;">Northeastern University</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="
+padding-right:20px;">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/Team:Northeastern">home</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">team <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/Team:Northeastern/Team">team</a></li>
+                    <li><a href="/Team:Northeastern/Collaborations">collaborations</a></li>
+                    <li><a href="#">notebook</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">project <span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="/Team:Northeastern/Description">description</a></li>
+                    <li><a href="/Team:Northeastern/Design">design</a></li>
+                    <li><a href="/Team:Northeastern/Experiments">experiments</a></li>
+                    <li><a href="/Team:Northeastern/Proof">proof</a></li>
+                    <li><a href="/Team:Northeastern/Results">results</a></li>
+                    <li><a href="/Team:Northeastern/Notebook">notebook</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">parts <span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="/Team:Northeastern/Parts">parts</a></li>
+                    <li><a href="/Team:Northeastern/Basic_Parts">basic parts</a></li>
+                    <li><a href="/Team:Northeastern/Composite_Parts">composite parts</a></li>
+                    <li><a href="/Team:Northeastern/Part_Collection">part collection</a></li>
+                </ul>
+            </li>
+            <li><a href="/Team:Northeastern/Safety">safety</a></li>
+            <li><a href="/Team:Northeastern/Attributions">attributions</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">human practices <span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="/Team:Northeastern/Human_Practices">human practices</a></li>
+                    <li><a href="/Team:Northeastern/HP/Silver">silver</a></li>
+                    <li><a href="/Team:Northeastern/HP/Gold">gold</a></li>
+                    <li><a href="/Team:Northeastern/Integrated_Practices">integrated practices</a></li>
+                    <li><a href="/Team:Northeastern/Engagement">Engagement</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">awards <span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="/Team:Northeastern/Entrepeneurship">entrepeneurship</a></li>
+                    <li><a href="/Team:Northeastern/Hardware">hardware</a></li>
+                    <li><a href="/Team:Northeastern/Software">software</a></li>
+                    <li><a href="/Team:Northeastern/Measurement">measurement</a></li>
+                    <li><a href="/Team:Northeastern/Model">model</a></li>
+                </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>  
 
 </html>
 
@@ -124,6 +203,13 @@
 </div>
 </html>
 <html>
+    
+    <div id="footer">
+            <a href="http://www.northeastern.edu/">Northeastern University, Boston MA</a> &middot;
+            <a href="https://github.com/omwan/iGEM-wiki-neu16">Github</a> &middot;
+            <a href="#">back to top</a>
+        </div>
+    
 	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
 	<!-- bower:js -->
 	<script src="bower_components\jquery\dist\jquery.js"></script>
@@ -131,7 +217,11 @@
 	<script src="bower_components\highlightjs\highlight.pack.js"></script>
 	<!-- endbower -->
 	<script src="js/bundle.js"></script>
+	<script src="js/declare.js"></script>
+	<script src="js/directives.js"></script>
+	<script src="js/init.js"></script>
 	<script src="js/maps"></script>
+	<script src="js/services.js"></script>
 	
 </html>
 
