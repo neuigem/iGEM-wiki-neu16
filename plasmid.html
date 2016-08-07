@@ -1,112 +1,923 @@
-<html>
+<html id="html" ng-app="app">
     <head>
-        <title>Northeastern University 2016 iGEM Team</title>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">  
-        <link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">  
-        <link href="styles/style.css" type="text/css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        
+        <script src="http://pastebin.com/raw/HCss4bjc" type="text/javascript"></script>
+
+<!--    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>-->
+<!--    	<script src="ui-bootstrap-custom-tpls-0.14.3.js"></script>-->
+<!--    	<script src="angular-animate.min.js"></script>-->
+<!--    	<script src="bootstrap-colorpicker-module.min.js"></script>-->
+<!--    	<script src="angular-material.min.js"></script>-->
+<!--    	<script src="angular-aria.min.js"></script>-->
+
+        <link href="http://2016.igem.org/Team:Northeastern/plasmidcss?action=raw&amp;ctype=text/css" rel="stylesheet" type="text/css">
+<!--
+    	<link href="bootstrap.min.css" rel="stylesheet">
+    	<link href="colorpicker.min.css" rel="stylesheet">
+    	<link href="angular-material.min.css" rel="stylesheet">
+-->
+
         <style type="text/css">
-            html, body {
-                height:1300px;
-                background:#f8f8f8;
-            }
+
+
+tr.collapse.in {
+    display: table-row;
+}
+
+html {
+  box-sizing: border-box;
+  height:100%;
+}
+
+#html {
+  height: 100%;
+  min-height: 100%;
+   background-color:#f8f8f8;
+}
+body {
+  min-height: 100%;
+  background-color:#f8f8f8;
+}
+
+
+*, *:before, *:after {
+  box-sizing: inherit!important;
+}
+
+#body {
+	background-color:#f8f8f8;
+	min-height:100%;
+}
+
+#container {
+	width:1100px;
+	height:600px;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+}
+
+#plasmid-view {
+	width: 600px;
+	height: 600px;
+	position:absolute;
+	background-color: #FFF;
+	box-shadow: 1px 2px 1px 1px #e8e8e8;
+	padding:0px;
+	top:55px;
+}
+
+#plasmid-design {
+	width: 521px;
+    position: absolute;
+    top: 682px;
+	background-color:#FFF;
+	box-shadow: 1px 2px 1px 1px #e8e8e8;
+	padding:40px;
+}
+
+.plasmid-input-field {
+	margin: 10px 10px 8px 8px;
+}
+
+.plasmid-input {
+	width:50px;
+	float: right;
+}
+
+#parts-design {
+	position: absolute;
+	left: 57%;
+	width: 43%;
+	top: 55px;
+	background-color: #FFF;
+	box-shadow: 1px 2px 1px 1px #e8e8e8;
+	padding:40px;
+	z-index:1;
+}
+
+.input-name {
+	width:100px;
+}
+
+#input-number {
+	width:65px;
+}
+
+.input-color {
+	width:50px;
+}
+
+.notcollapsed {
+	height:120px;
+  -webkit-transition: opacity 500ms ease, visibility 500ms ease;
+  -moz-transition: opacity 500ms ease, visibility 500ms ease;
+  -o-transition: opacity 500ms ease, visibility 500ms ease;
+  transition: opacity 500ms ease, visibility 500ms ease;
+}
+
+.collapsed {
+	height:60px;
+-webkit-transition: opacity 500ms ease, visibility 500ms ease;
+  -moz-transition: opacity 500ms ease, visibility 500ms ease;
+  -o-transition: opacity 500ms ease, visibility 500ms ease;
+  transition: opacity 500ms ease, visibility 500ms ease;
+}
+
+.submitted-part md-input-container {
+	width:80px;
+}
+
+.submitted-part md-checkbox {
+	margin-right:0px;
+}
+
+#unsubmitted {
+	height:120px;
+}
+
+.unsubmitted-parts {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 500ms ease, visibility 500ms ease;
+  -moz-transition: opacity 500ms ease, visibility 500ms ease;
+  -o-transition: opacity 500ms ease, visibility 500ms ease;
+  transition: opacity 500ms ease, visibility 500ms ease;
+}
+
+#unsubmitted-part {
+	height:30px;
+}
+
+.editable-buttons {
+	display: none;
+	width:75px;
+}
+
+.input-sm {
+	width:55px!important;
+	line-height:2.8!important;
+}
+
+.editable-wrap .editable-controls>input, .editable-wrap .editable-controls>select, .editable-wrap .editable-controls>textarea {
+	width:50px!important;
+	height:28px!important;
+}
+
+.md-warn {
+	min-width:25px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.md-primary {
+	min-width:12px;
+	color: #000000;
+}
+
+md-checkbox.md-checked.blue .md-icon {
+ background-color: #3f83b5;
+}
+
+.filler {
+	height:20px;
+	border-top: solid;
+	border-width: thin;
+	border-color: #d3d3d3;
+}
+
+.filler-no-border {
+	height:15px;
+}
+
+.filler-no-border {
+	height:15px;
+}
+
+#plasmid-design-table {
+	width:504px;
+}
+
+.unsubmitted-parts md-input-container{
+	width:86px;
+}
+
+.unsubmitted-parts md-checkbox{
+	left:0px;
+	margin-right:0px;
+}
+
+md-checkbox p {
+	color:#939393;
+	padding-top: 14px;
+	font-size:12.5px;
+	margin:0px;
+}
+
+#export-svg h2 {
+	padding-left: 25px;
+}
+
+.data-input {
+	padding-bottom:4px;
+}
+
+#parts-design md-input-container input[type="number"] {
+	width:60px;
+}
+
+
+.md-button.submit-btn.md-raised {
+	background-color: rgba(0,136,255,1);
+	color:white;
+	min-width:66px;
+	font-weight:bold;
+}
+.md-button.submit-btn.md-raised:hover {
+	background-color: rgba(0,136,255, 0.5);
+}
+
+.md-button.import-btn.md-raised {
+	background-color: rgb(40,164,40);
+	color:white;
+	min-width:66px;
+	font-weight:bold;
+}
+.md-button.import-btn.md-raised:hover {
+	background-color: rgba(40,164,40,0.5);
+}
+
+.md-button.md-warn {
+	min-width:64px;
+}
+
+md-input-container.md-default-theme.md-input-focused label {
+    color:rgba(0,136,255,1) !important;
+}
+
+.data-input-color md-input-container .md-input {
+width: 26px;
+font-size:0px;
+border-width:0px!important;
+}
+
+#export-svg {
+  width: 601px;
+  position: absolute;
+  right: 502px;
+  top: 56px;
+  background-color: white;
+  box-shadow: 1px 2px 6px 4px #e1e1e1;
+}
+
+#export-svg p {
+	font-size:9px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom:25px;
+}
+
+.md-button.popup-theme {
+  min-width: 56px;
+  color: #c0c0c0!important;
+  position: relative;
+  top: 10px;
+  position: absolute;
+  right: 0px;
+}
+
+.export-button {
+	width: 60px;
+position: absolute;
+left: -50px;
+top: 110px;
+}
+
+.md-button.md-primary.md-export-theme {
+	background-color: rgba(0,136,255,1);
+	color:white;
+	min-width:28px;
+	font-weight:bold;
+}
+
+.md-button.md-primary.md-export-theme:hover {
+	background-color: rgba(0, 136, 255, 0.5)!important;
+}
+
+.md-button.md-dropdown-theme {
+	background-color: #c3c3c3;
+	color:white;
+	min-width:28px;
+	font-weight:bold;
+}
+.md-button.md-dropdown-theme:hover {
+	background-color: #dbdbdb!important;
+}
+
+.md-slider.md-custom {
+}
+
+#plasmid-design-tabs {
+}
+
+.md-button.md-raised.md-colorpicker-theme {
+	min-width:35px;
+	width:35px;
+}
+
+.label-tab {
+	top: 32px;
+	flex-direction:row;
+}
+
+#labels-tab {
+	overflow:hidden;
+}
+
+.label-tab#box2 {
+	left: 258px;
+	top: -44px!important;
+}
+
+.label-box-2 {
+	top:-40px;
+}
+
+.ticks-interval {
+	width:200px;
+	top:14px;
+}
+
+#tick-color-1 {
+	position: absolute;
+left: 285px;
+top: 133px;
+flex-direction: row;
+padding-top:21px;
+}
+
+#tick-color-2 {
+		position: absolute;
+left: 285px;
+flex-direction: row;
+top:269px;
+padding-top:21px;
+}
+
+#track-color {
+	position:absolute;
+	right: 104px;
+top: 25px;
+}
+
+#sequence-length {
+	width: 200px;
+}
+
+#plasmid-name {
+	width:157px;
+	padding-bottom:36px;
+	right: 42px;
+    top: 42px;
+    position:absolute;
+}
+
+.url-input {
+	width:60px!important;
+}
+
+.url-input-invalid {
+	display: none!important;
+}
+
+#name-input {
+	height:23px;
+}
+
+.input-labels {
+	top:1px;
+}
+
+#color-input-label {
+top:2px;
+visibility: visible;
+}
+
+#path-input {
+	padding-bottom:1px;
+}
+
+#label-lines-box {
+	position: relative;
+	flex-direction:row;
+}
+
+.md-primary.md-new-theme {
+	min-width:15px;
+}
+
+.md-tab.md-active {
+	color:#2196F3!important;
+}
+
+.md-tab {
+	color:#C3C3C3!important;
+}
+
+#options {
+height: auto;
+width: 600px;
+position: absolute;
+top: 108px;
+right: -170px;
+z-index: 2;
+}
+
+#options .md-button {
+  position: absolute;
+  left: 448px;
+  color: #9d9d9d;
+  min-width: 20px;
+}
+
+#Shownoptions .md-button {
+	color:#c0c0c0!important;
+	min-width: 56px!important;
+  	position: absolute;
+  	left: 494px;
+  	z-index:4;
+  	top: 12px;
+}
+
+#Shownoptions {
+  background-color: #FFF;
+  position: absolute;
+  box-shadow: 1px 2px 6px 4px #e1e1e1;
+  border-color: #888;
+  width: 577px;
+  left: -47px;
+  top: -53px;
+  z-index: 3;
+}
+
+#Shownoptions_content {
+  position: relative;
+  left: 30px;
+  padding-bottom: 9px;
+}
+
+.color-input-label {
+  position: absolute;
+  right: 14px;
+}
+
+.md-button.md-raised.md-part_color-theme {
+  min-width: 10px;
+  width: 16px;
+  height: 29px;
+  margin: 0;
+  min-height: 29px;
+  top: 10px;
+}
+
+.input-name-repeat {
+	width:81px!important;
+}
+
+.input-start-repeat {
+	margin-left: 10px;
+    width: 76px!important;
+}
+
+#design-tabs {
+	top: 20px;
+    margin-bottom: 10px;
+}
+
+
         </style>
+
+        <!-- AngularPlasmid -->
+        <script src="http://2016.igem.org/Team:Northeastern/declarejs?action=raw&amp;ctype=text/javascript"></script>
+        <script src="http://2016.igem.org/Team:Northeastern/directivesjs?action=raw&amp;ctype=text/javascript"></script>
+        <script src="http://2016.igem.org/Team:Northeastern/initjs?action=raw&amp;ctype=text/javascript"></script>
+        <script src="http://2016.igem.org/Team:Northeastern/servicesjs?action=raw&amp;ctype=text/javascript"></script>
     </head>
+
+
     <body>
-    <nav class="navbar navbar-default navbar-fixed-top" style="border-top:18px solid #000;">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-            <a class="navbar-brand page-scroll" href="#top" style="padding:0px 20px;line-height:50px;">Northeastern University</a>
+    <div ng-controller="PlasmidCtrl" id="container">
+
+        <div id="plasmid-view" style="font-family:{{font_choice}}">
+            <!-- The plasmid is 600 by 600 by default -->
+            <plasmid plasmidheight="600" plasmidwidth="600" sequencelength='{{sequencelength}}' >
+                <plasmidtrack radius='{{radius}}' style='fill:{{track_color}};stroke:#ccc' width='{{width}}'>
+
+                    <!-- For each track part, add an additional trackmarker to the HTML, with start, size, height, color, URL, forward arrow, reverse arrow -->
+                    <trackmarker ng-show="!$first" ng-repeat="all in parts" start='{{all.start}}' end='{{all.start+all.basepairs}}' vadjust="{{0 - all.height/2}}" wadjust="{{all.height}}" style='fill:{{all.color}}; stroke:#000000' arrowendlength="{{all.fwdarrow}}" arrowstartlength="{{all.revarrow}}">
+                        <markerlabel text="{{all.name}}" type="{{all.curve}}" vadjust='{{part_label_vadjust}}' style='fill:{{part_label_color}};color:#000000;font-size:{{part_font_size}}px; stroke:none' showline="{{lines.choice}}"></markerlabel>
+                            <svgelement type="a" ng-if="all.link.length >= 1" xlink:href="{{all.link}}" target="_blank">
+
+                                <!-- Adjust the marker label using the AngularPlasmid API -->
+                                <markerlabel text="{{all.name}}" type="{{all.curve}}" vadjust='{{part_label_vadjust}}' style='fill:{{part_label_color}}; color:#FFFFFF; font-size:{{part_font_size}}px; stroke:none'></markerlabel>
+                            </svgelement>
+                    </trackmarker>
+
+                    <!-- Track appearances are set in the plasmid settings box below -->
+                    <tracklabel text='{{plasmidname}}' style='font-size:{{font_size}}px;fill:#000000;stroke:none'></tracklabel>
+                    <trackscale interval='{{minorinterval}}' direction='{{label_direction}}' showlabels='0' style='stroke:{{minor_tick_color}}' ticksize="{{minor_tick_size}}" labelvadjust='10'></trackscale>
+                    <trackscale interval='{{majorinterval}}' direction='{{label_direction}}' showlabels='1' style='stroke:{{tick_color}};stroke-width:2px' labelvadjust='{{tick_label_vadjust}}' labelstyle='font-size:{{tick_font_size}}px;fill:{{label_color}};stroke:none' vadjust='{{label_vadjust}}' ticksize="{{tick_size}}"></trackscale>
+                </plasmidtrack>
+            </plasmid>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="
-padding-right:20px;">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/Team:Northeastern">home</a></li>
+        <div id="parts-design">
+        	<h2>Parts</h2>
 
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">team <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="/Team:Northeastern/Team">team</a></li>
-                    <li><a href="/Team:Northeastern/Collaborations">collaborations</a></li>
-                    <li><a href="#">notebook</a></li>
-                </ul>
-            </li>
+        		<table>
+        		<thead>
+        		<tr class="filler-no-border">
+        			<td colspan="7">
+        			</td>
+        		</tr>
 
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">project <span class="caret"></span></a>
+                    <!-- Area for new part input -->
+        			<tr class="unsubmitted-parts">
+        				<td>
+        					<md-input-container class="input-name-repeat" flex>
+        					   <label>Name</label>
+        					   <input ng-model="part.name" type="text" id="name-input"/>
+        					</md-input-container>
+        				</td>
+        				<td class="data-input">
+        					<md-input-container class="input-start-repeat" flex>
+        					   <label class="input-labels">Start</label>
+        					   <input ng-model="part.start" type="number" min="0" max="{{sequencelength}}"/>
+        					</md-input-container>
+        				</td>
+        				<td class="data-input">
+                        <form id="length">
+        					<md-input-container flex ng-if="PartendOption">
+        					   <label name="myInput" class="input-labels">bp's</label>
+        					   <input ng-model="part.basepairs" type="number" min="0" max="{{sequencelength-1}}"/>
+        					</md-input-container>
+                        </form>
+                            <md-input-container flex ng-if="!PartendOption">
+                                <label class="input-labels">End</label>
+                                <input ng-model="part.end" type="number" min="0" max="{{sequencelength}}"/>
+                            </md-input-container>
+        				</td>
 
-                <ul class="dropdown-menu">
-                    <li><a href="/Team:Northeastern/Description">description</a></li>
-                    <li><a href="/Team:Northeastern/Design">design</a></li>
-                    <li><a href="/Team:Northeastern/Experiments">experiments</a></li>
-                    <li><a href="/Team:Northeastern/Proof">proof</a></li>
-                    <li><a href="/Team:Northeastern/Results">results</a></li>
-                    <li><a href="/Team:Northeastern/Notebook">notebook</a></li>
-                </ul>
-            </li>
+        				<td class="data-input-color">
+        					<md-input-container flex>
+        					   <label class="color-input-label">Color</label>
+                                <md-button class="md-raised md-part_color-theme" colorpicker="rgba" ng-model="part.color" type="text" ng-style="{'background-color':part.color}" aria-label="null"></md-button>
+        					</md-input-container>
+        				</td>
+        				<td>
+        					<md-button md-no-ink class="md-primary md-new-theme" ng-click="isInputFormCollapsed = !isInputFormCollapsed" ng-style="{color: 'black'}"><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isInputFormCollapsed, 'glyphicon-chevron-up': !isInputFormCollapsed}" aria-label="null"></i></md-button>
+        				</td>
+        				<td colspan="2">
+        					<md-button class="submit-btn md-raised" ng-click="addRow()" aria-label=" ">SUBMIT</md-button>
+        				</td>
 
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">parts <span class="caret"></span></a>
+        			</tr>
 
-                <ul class="dropdown-menu">
-                    <li><a href="/Team:Northeastern/Parts">parts</a></li>
-                    <li><a href="/Team:Northeastern/Basic_Parts">basic parts</a></li>
-                    <li><a href="/Team:Northeastern/Composite_Parts">composite parts</a></li>
-                    <li><a href="/Team:Northeastern/Part_Collection">part collection</a></li>
-                </ul>
-            </li>
-            <li><a href="/Team:Northeastern/Safety">safety</a></li>
-            <li><a href="/Team:Northeastern/Attributions">attributions</a></li>
+        			<tr class="unsubmitted-parts" uib-collapse="isInputFormCollapsed">
 
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">human practices <span class="caret"></span></a>
+        				<td>
+        					<md-input-container class="input-name-repeat" flex>
+        						<label>Size</label>
+        						<input ng-model="part.height" type="number" min="-25" max="50"/>
+        					</md-input-container>
+        				</td>
+        				<td class="data-input">
+        					<md-checkbox md-no-ink ng-model="part.fwdarrow" ng-true-value="5" ng-false-value="0" vlaue="Forward" aria-label="null"><p>Forward</p></md-checkbox>
+        				</td>
+        				<td class="data-input">
+        					<md-checkbox md-no-ink ng-model="part.revarrow" ng-true-value="5" ng-false-value="0" aria-label="null"><p>Reverse</p></md-checkbox>
+        				</td>
+        				<td colspan="2" id="path-input">
+        					<md-checkbox md-no-ink ng-model="part.curve" ng-true-value="'path'" ng-false-value="'notpath'" aria-label="null"><p>Name Path</p></md-checkbox>
+        				</td>
+        				<td colspan="1" class="url-input">
+						    <md-input-container flex class="url-input">
+						    <label>URL</label>
+        						<input ng-model="part.link" type="url" class="url-input"/>
+        					</md-input-container>
+        				</td>
+        				<td colspan="1">
+        				</td>
 
-                <ul class="dropdown-menu">
-                    <li><a href="/Team:Northeastern/Human_Practices">human practices</a></li>
-                    <li><a href="/Team:Northeastern/HP/Silver">silver</a></li>
-                    <li><a href="/Team:Northeastern/HP/Gold">gold</a></li>
-                    <li><a href="/Team:Northeastern/Integrated_Practices">integrated practices</a></li>
-                    <li><a href="/Team:Northeastern/Engagement">Engagement</a></li>
-                </ul>
-            </li>
+        			</tr>
+        			<tr class ="filler-no-border">
+        				<td colspan="7">
+        				</td>
+        			</tr>
+        		</thead>
 
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">awards <span class="caret"></span></a>
+                <!-- The table is comprised of a list of submitted parts -->
+        		<tbody ng-repeat="all in parts" ng-show="!$first">
 
-                <ul class="dropdown-menu">
-                    <li><a href="/Team:Northeastern/Entrepeneurship">entrepeneurship</a></li>
-                    <li><a href="/Team:Northeastern/Hardware">hardware</a></li>
-                    <li><a href="/Team:Northeastern/Software">software</a></li>
-                    <li><a href="/Team:Northeastern/Measurement">measurement</a></li>
-                    <li><a href="/Team:Northeastern/Model">model</a></li>
-                </ul>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-    </nav>    
-        
-        
-    <div class="container-fluid" style="margin-top:60px;">
-        <iframe style="height:100%;width:100%;border:none;" src="http://jjtimmons.github.io"></iframe>
-    </div><!--container-->
+        			<tr ng-show="!$first" class ="filler">
+        				<td colspan="7">
+        				</td>
+        			</tr>
 
-        
-        <div id="footer">
-            <a href="http://www.northeastern.edu/">Northeastern University, Boston MA</a> &middot;
-            <a href="https://github.com/omwan/iGEM-wiki-neu16">Github</a> &middot;
-            <a href="#">back to top</a>
+        			<tr class="submitted-part">
+                        <!-- Set the name of the soon to be added part -->
+        				<td>
+        					<md-input-container class="input-name-repeat" flex>
+        					    <label>Name</label>
+        					    <input required ng-model="all.name" type="text"/>
+        					</md-input-container>
+        				</td>
+
+                        <!-- Set the part's starting point -->
+        				<td>
+        					<md-input-container class="input-start-repeat" flex>
+        					    <label>Start</label>
+        					    <input required ng-model="all.start" type="number" min="0" max="{{sequencelength}}"/>
+        					</md-input-container>
+        				</td>
+
+                        <!-- Set the length of the part, can't exceed total plasmid size -->
+        				<td>
+                            <md-input-container flex>
+                                <label class="input-labels">bp's</label>
+                                <input ng-model="all.basepairs" type="number" min="0" max="{{sequencelength}}"/>
+                            </md-input-container>
+        				</td>
+        				<td class="data-input-color">
+
+                            <!-- set the color of the part, uses the angular color-picker -->
+                            <md-input-container>
+                                <label class="color-input-label">Color</label>
+                                <md-button class="md-raised md-part_color-theme" colorpicker="rgba" ng-model="all.color" type="text" ng-style="{'background-color':all.color}" aria-label="null"></md-button>
+                            </md-input-container>
+        				</td>
+
+                        <!-- Button for selecting additional settings -->
+        				<td>
+        					<md-button md-no-ink ng-style="{color: 'black'}" class="md-primary md-new-theme" ng-click="isDataCollapsed = !isDataCollapsed" ng-show="!$first"><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isDataCollapsed, 'glyphicon-chevron-up': !isDataCollapsed}" aria-label="null"></i></md-button>
+        				</td>
+
+                        <!-- Button for deleting the current part and its input -->
+        				<td colspan="2" id="delete">
+        					<md-button md-no-ink class="md-warn" ng-click="removeRow($index)" ng-show="!$first" aria-label="null">DELETE</md-button>
+        				</td>
+        			</tr>
+
+        			<!-- Additional part settings. Only show if the dropdown has been clicked for this part -->
+        			<tr uib-collapse="isDataCollapsed">
+
+        				<td>
+        					<md-input-container flex>
+        						<label>Size</label>
+        						<input ng-model="all.height" type="number" min="-25" max="50"/>
+        					</md-input-container>
+        				</td>
+                        <!-- point the part foward -->
+        				<td>
+        					<md-checkbox md-no-ink ng-model="all.fwdarrow" ng-true-value="5" ng-false-value="0" ng-show="!$first" aria-label="null"><p>Foward</p></md-checkbox>
+        				</td>
+                        <!-- point the part in reverse direction -->
+        				<td>
+        					<md-checkbox md-no-ink ng-model="all.revarrow" ng-true-value="5" ng-false-value="0" ng-show="!$first" aria-label="null"><p>Reverse</p></md-checkbox>
+        				</td>
+                        <!-- align the part name along the track -->
+        				<td colspan="2">
+        					<md-checkbox md-no-ink ng-model="all.curve" ng-true-value="'path'" ng-false-value="'notpath'" ng-show="!$first" aria-label="null"><p>Name Path</p></md-checkbox>
+        				</td>
+                        <!-- URL for linking to the part source -->
+        				<td colspan="2" class="url-input">
+        				    <md-button class="md-icon-button" ng-class="{'url-input-valid': URLinputform2, 'url-input-invalid': !URLinputform2}" ng-click="URLinputform2 = !URLinputform2" aria-label="null">
+						        <i class="glyphicon glyphicon-link"></i>
+						    </md-button>
+						    <md-input-container uib-collapse="URLinputform2" class="url-input" flex ng-class="{'url-input-invalid': URLinputform2, 'url-input-valid': !URLinputform2}">
+        						<label>URL</label>
+        						<input ng-model="all.link" class="url-input" type="url"/>
+        					</md-input-container>
+        				</td>
+
+        			</tr>
+
+        			<tr class ="filler-no-border">
+        				<td colspan="7">
+        				</td>
+        			</tr>
+
+        		</tbody>
+        	</table>
+
         </div>
-        
+
+        <!-- Settings for changing the appearance of the plasmid -->
+        <div id="plasmid-design">
+
+        	<h2>Plasmid</h2>
+    			<form>
+        			<md-input-container flex id="plasmid-name" class="md-block">
+        				<label>Name</label>
+        				<input ng-model="plasmidname" type="text"/>
+        			</md-input-container>
+    			</form>
+
+                <!-- Series of tabs for difference appearance settings -->
+        		<md-content id="design-tabs">
+   					 <md-tabs md-dynamic-height md-border-bottom id="plasmid-design-tabs">
+
+     					<md-tab label="Type">
+           					<md-content flex class="md-padding">
+			        			<md-input-container flex class="type_input">
+			        				<label>Typeface</label>
+			        				<md-select ng-model="font_choice" aria-label="null">
+			        					<md-option ng-repeat="i in fonts" value="{{i.face}}" aria-label="null">{{i.face}}</md-option>
+			        				</md-select>
+			        			</md-input-container>
+
+			        			<md-input-container class="type_input">
+			        				<label>Plasmid name font-size</label>
+			        				<md-select ng-model="font_size" ng-init="font_size=21" aria-label="null">
+			        					<md-option ng-repeat="i in [21, 27, 34, 42, 51, 61]" value="{{i}}" aria-label="null">{{i}}</md-option>
+			        				</md-select>
+			        			</md-input-container>
+
+			        			<md-input-container class="type_input">
+			        				<label>Part labels font-size</label>
+			        				<md-select ng-model="part_font_size" ng-init="part_font_size=11" aria-label="null">
+			        					<md-option ng-repeat="i in [9, 11, 14, 18, 23]" value="{{i}}" aria-label="null">{{i}}</md-option>
+			        				</md-select>
+			        			</md-input-container>
+
+				        		<md-input-container>
+				        			<label>Tick labels font-size</label>
+				        			<md-select ng-model="tick_font_size" ng-init="tick_font_size=9" aria-label="null">
+				        				<md-option ng-repeat="i in [7, 9, 11, 13, 15, 17]" value="{{i}}">{{i}}</md-option>
+				        				</md-select>
+				        		</md-input-container>
+        			     	</md-content>
+      					</md-tab>
+
+                        <!-- Adjustments to the labels of the ticks -->
+      					<md-tab label="Ticks">
+        					<md-content class="md-padding">
+
+									<md-radio-group ng-model="label_direction">
+										<label>Label direction</label>
+									      <md-radio-button value="in" aria-label="null">Inside</md-radio-button>
+									      <md-radio-button value="out" aria-label="null">Outside</md-radio-button>
+									</md-radio-group>
+
+				        			<md-input-container flex class="ticks-interval">
+				        				<label>Major tick interval</label>
+				        					<input ng-model="majorinterval" required type="number" min="0" max="{{sequencelength}}" ng-init="majorinterval=100"/>
+				        			</md-input-container>
+
+		        					<md-input-container flex id="tick-color-1">
+		        						<label>Major tick color</label>
+		        							<md-button colorpicker="rgba" ng-model="tick_color" type="text" ng-style="{'background-color':tick_color}" class="md-raised md-colorpicker-theme" aria-label="null"></md-button>
+		        					</md-input-container>
+
+					         		<md-input-container>
+					        			<label>Major tick size</label>
+					        				<md-slider flex ng-model="tick_size" min="-15" max="15" ng-init="tick_size=4" aria-label="null">
+					      					</md-slider>
+					      			</md-input-container>
+				        			<md-input-container flex class="ticks-interval">
+				        				<label>Minor tick interval:</label>
+				        					<input ng-model="minorinterval" type="number" min="0" max="{{sequencelength}}"/>
+				        			</md-input-container>
+
+		        					<md-input-container flex id="tick-color-2">
+		        						<label>Minor tick Color</label>
+		        							<md-button colorpicker="rgba" ng-model="minor_tick_color" type="text"ng-style="{'background-color':minor_tick_color}" class="md-raised md-colorpicker-theme" aria-label="null"></md-button>
+		        					</md-input-container>
+
+					         		<md-input-container>
+					        			<label>Minor tick size</label>
+					        				<md-slider flex ng-model="minor_tick_size" min="-15" max="15" ng-init="minor_tick_size=3" aria-label="null">
+					      					</md-slider>
+					      			</md-input-container>
+
+        					</md-content>
+      					</md-tab>
+
+                        <!-- Adjustments to label color, distance, etc. -->
+     					<md-tab label="Labels">
+      						<md-content class="md-padding" id="labels-tab">
+
+			        					<md-input-container class="label-tab">
+			        						<label>Major tick label color</label>
+			        							<md-button colorpicker="rgba" ng-model="label_color" type="text" ng-style="{'background-color':label_color}" class="md-raised md-colorpicker-theme" aria-label="null"></md-button>
+			        					</md-input-container>
+
+			        					<md-input-container class="label-tab" id="box2">
+			        						<label>Part labels color</label>
+			        							<md-button class="md-raised md-colorpicker-theme" colorpicker="rgba" ng-model="part_label_color" type="text" ng-style="{'background-color':part_label_color}" aria-label="null"></md-button>
+			        					</md-input-container>
+
+						         		<md-input-container class="label-box-2">
+						        			<label>Label/tick distance from center</label>
+						        				<md-slider flex ng-model="label_vadjust" min="-20" max="20" ng-init="label_vadjust=0" aria-label="null">
+						      					</md-slider>
+						      			</md-input-container>
+
+						         		<md-input-container class="label-box-2">
+						        			<label>Tick label distance from tick</label>
+						        				<md-slider flex ng-model="tick_label_vadjust" min="-20" max="30" ng-init="tick_label_vadjust=10" aria-label="null">
+						      					</md-slider>
+						      			</md-input-container>
+						         		<md-input-container class="label-box-2">
+						        			<label>Part label distance from track</label>
+						        				<md-slider flex ng-model="part_label_vadjust" min="-55" max="120" ng-init="part_label_vadjust=50" aria-label="null">
+						      					</md-slider>
+						      			</md-input-container>
+						      			<md-input-container id="label-lines-box">
+						      				<label>Label lines</label>
+						      				<md-checkbox md-no-ink ng-model="lines.choice" ng-true-value="1" ng-false-value="0" aria-label="null"></md-checkbox>
+						      			</md-input-container>
+
+        					</md-content>
+      					</md-tab>
+
+                        <!-- For adjustments to the track itself -->
+      					<md-tab label="Track">
+        					<md-content class="md-padding">
+
+				        		<md-input-container flex id="sequence-length">
+				        			<label>Sequence Length</label>
+				        			<input ng-model="sequencelength" required type="number" min="1" ng-init="sequencelength=1000"/>
+				        		</md-input-container>
+
+			        			<md-input-container class="label-tab" id="track-color">
+			        				<label>Track color</label>
+			        					<md-button class="md-raised md-colorpicker-theme" colorpicker="rgba" ng-model="track_color" type="text" ng-style="{'background-color':track_color}" aria-label="null"></md-button>
+			        			</md-input-container>
+
+				         		<md-input-container>
+				        			<label>Radius</label>
+				        				<md-slider flex ng-model="radius" min="35" max="270" ng-init="radius=200" aria-label="null">
+				      				</md-slider>
+				      			</md-input-container>
+
+				        		<md-input-container>
+				        			<label>Width</label>
+				        				<md-slider flex ng-model="width" min="0" max="50" ng-init="width=25" aria-label="null"></md-slider>
+				        		</md-input-container>
+
+        					</md-content>
+      					</md-tab>
+    				</md-tabs>
+  				</md-content>
+
+        </div>
+
+        <!-- An export button for SVG. May add jpg, png later -->
+        <div class="export-button">
+       		<md-fab-speed-dial md-open="demo.isOpen" md-direction="down" ng-class="demo.selectedMode" aria-label="null">
+       			<md-fab-trigger>
+         			<md-button class="md-raised md-primary md-export-theme" aria-label="null">
+         		 		<i class="glyphicon glyphicon-download-alt"></i>
+        	  		</md-button>
+        		</md-fab-trigger>
+       			<md-fab-actions>
+         			<md-button md-open="demo.isOpen" ng-click="exportSVG()" class="md-raised md-dropdown-theme" aria-label="null">SVG
+          			</md-button>
+        		</md-fab-actions>
+      		</md-fab-speed-dial>
+        </div>
+
+        <div>
+        	<span ng-hide="toggle_value">
+        		<div id="export-svg">
+        		<md-button class="popup-theme" ng-click="exportSVG()" aria-label="null">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </md-button>
+        		<h2>Copy and paste this HTML</h2>
+        		<p>{{exported_svg}}</p>
+        		<span ng-show="toggle_value"></span>
+        		</div>
+        	</span>
+        </div>
+
+        <!-- For adjustments to input settings. For example, length in bps, are index of last basepair -->
+        <div id="options">
+            <md-button ng-click="toggleOptions()" aria-label="null">
+                <i class="glyphicon glyphicon-cog"></i></md-button>
+                <div id="Shownoptions" ng-show="toggle_options">
+                    <md-button ng-click="toggleOptions()"><i class="glyphicon glyphicon-remove" aria-label="null"></i></md-button>
+                    <div id="Shownoptions_content">
+                    <h2>Options</h2>
+                    <md-radio-group ng-model="PartendOption">
+                        <label>Input length or endpoint</label>
+                            <md-radio-button ng-value="true" aria-label="null">bp's</md-radio-button>
+                            <md-radio-button ng-value="false" aria-label="null">End</md-radio-button>
+                    </md-radio-group>
+                    </div>
+                </div>
+        </div>
+
+
+       </div>
     </body>
 </html>
