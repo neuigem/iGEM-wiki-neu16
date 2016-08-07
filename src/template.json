@@ -69,7 +69,8 @@
     },
     "templates": {
         "head"     : "head",
-        "footer"   : "footer"
+        "footer"   : "footer",
+        "plasmidhead" : "plasmidhead"
     },
     "markdown": {
         "home": "home",

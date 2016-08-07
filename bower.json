@@ -22,7 +22,12 @@
     "font-awesome": "fontawesome#~4.4.0",
     "highlightjs": "~8.7.0",
     "jquery": "~2.1.4",
-    "normalize-libsass": "~1.0.3"
+    "normalize-libsass": "~1.0.3",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-bootstrap": "^2.0.1",
+    "angular-bootstrap-colorpicker": "^3.0.25",
+    "angular-material": "^1.0.9"
   },
   "overrides": {
     "font-awesome": {

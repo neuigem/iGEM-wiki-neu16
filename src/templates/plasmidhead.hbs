@@ -1,0 +1,504 @@
+<html ng-app="app">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <!-- Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="../../bower_components/angular-bootstrap/ui-bootstrap-custom-tpls-0.14.3.js"></script>
+    <script src="../../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../../bower_components/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js"></script>
+    <script src="../../bower_components/angular-material/angular-material.js"></script>
+    <script src="../../bower_components/angular-aria/angular-aria.js"></script>
+    <!-- Style-sheets/bootstraps -->
+    <link href="../../bower_components/angular-bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../../bower_components/angular-bootstrap-colorpicker/css/colorpicker.css" rel="stylesheet">
+    <link href="../../bower_components/angular-material/angular-material.css" rel="stylesheet">
+    <!-- AngularPlasmid -->
+    <script src='lib/declare.js'></script>
+    <script src="lib/directives.js"></script>
+    <script src="lib/init.js"></script>
+    <script src="lib/services.js"></script>
+    
+    <style type="text/css">
+        tr.collapse.in {
+            display: table-row;
+        }
+        
+        html {
+            box-sizing: border-box;
+            height: 100%;
+        }
+        
+        #html {
+            height: 100%;
+            min-height: 100%;
+            background-color: #f8f8f8;
+        }
+        
+        body {
+            min-height: 100%;
+            background-color: #f8f8f8;
+        }
+        
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit!important;
+        }
+        
+        #body {
+            background-color: #f8f8f8;
+            min-height: 100%;
+        }
+        
+        #container {
+            width: 1100px;
+            height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        
+        #plasmid-view {
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            background-color: #FFF;
+            box-shadow: 1px 2px 1px 1px #e8e8e8;
+            padding: 0px;
+            top: 55px;
+        }
+        
+        #plasmid-design {
+            width: 521px;
+            position: absolute;
+            top: 682px;
+            background-color: #FFF;
+            box-shadow: 1px 2px 1px 1px #e8e8e8;
+            padding: 40px;
+        }
+        
+        .plasmid-input-field {
+            margin: 10px 10px 8px 8px;
+        }
+        
+        .plasmid-input {
+            width: 50px;
+            float: right;
+        }
+        
+        #parts-design {
+            position: absolute;
+            left: 57%;
+            width: 43%;
+            top: 55px;
+            background-color: #FFF;
+            box-shadow: 1px 2px 1px 1px #e8e8e8;
+            padding: 40px;
+            z-index: 1;
+        }
+        
+        .input-name {
+            width: 100px;
+        }
+        
+        #input-number {
+            width: 65px;
+        }
+        
+        .input-color {
+            width: 50px;
+        }
+        
+        .notcollapsed {
+            height: 120px;
+            -webkit-transition: opacity 500ms ease, visibility 500ms ease;
+            -moz-transition: opacity 500ms ease, visibility 500ms ease;
+            -o-transition: opacity 500ms ease, visibility 500ms ease;
+            transition: opacity 500ms ease, visibility 500ms ease;
+        }
+        
+        .collapsed {
+            height: 60px;
+            -webkit-transition: opacity 500ms ease, visibility 500ms ease;
+            -moz-transition: opacity 500ms ease, visibility 500ms ease;
+            -o-transition: opacity 500ms ease, visibility 500ms ease;
+            transition: opacity 500ms ease, visibility 500ms ease;
+        }
+        
+        .submitted-part md-input-container {
+            width: 80px;
+        }
+        
+        .submitted-part md-checkbox {
+            margin-right: 0px;
+        }
+        
+        #unsubmitted {
+            height: 120px;
+        }
+        
+        .unsubmitted-parts {
+            opacity: 1;
+            visibility: visible;
+            -webkit-transition: opacity 500ms ease, visibility 500ms ease;
+            -moz-transition: opacity 500ms ease, visibility 500ms ease;
+            -o-transition: opacity 500ms ease, visibility 500ms ease;
+            transition: opacity 500ms ease, visibility 500ms ease;
+        }
+        
+        #unsubmitted-part {
+            height: 30px;
+        }
+        
+        .editable-buttons {
+            display: none;
+            width: 75px;
+        }
+        
+        .input-sm {
+            width: 55px!important;
+            line-height: 2.8!important;
+        }
+        
+        .editable-wrap .editable-controls>input,
+        .editable-wrap .editable-controls>select,
+        .editable-wrap .editable-controls>textarea {
+            width: 50px!important;
+            height: 28px!important;
+        }
+        
+        .md-warn {
+            min-width: 25px;
+            color: #000000;
+            font-weight: bold;
+        }
+        
+        .md-primary {
+            min-width: 12px;
+            color: #000000;
+        }
+        
+        md-checkbox.md-checked.blue .md-icon {
+            background-color: #3f83b5;
+        }
+        
+        .filler {
+            height: 20px;
+            border-top: solid;
+            border-width: thin;
+            border-color: #d3d3d3;
+        }
+        
+        .filler-no-border {
+            height: 15px;
+        }
+        
+        .filler-no-border {
+            height: 15px;
+        }
+        
+        #plasmid-design-table {
+            width: 504px;
+        }
+        
+        .unsubmitted-parts md-input-container {
+            width: 86px;
+        }
+        
+        .unsubmitted-parts md-checkbox {
+            left: 0px;
+            margin-right: 0px;
+        }
+        
+        md-checkbox p {
+            color: #939393;
+            padding-top: 14px;
+            font-size: 12.5px;
+            margin: 0px;
+        }
+        
+        #export-svg h2 {
+            padding-left: 25px;
+        }
+        
+        .data-input {
+            padding-bottom: 4px;
+        }
+        
+        #parts-design md-input-container input[type="number"] {
+            width: 60px;
+        }
+        
+        .md-button.submit-btn.md-raised {
+            background-color: rgba(0, 136, 255, 1);
+            color: white;
+            min-width: 66px;
+            font-weight: bold;
+        }
+        
+        .md-button.submit-btn.md-raised:hover {
+            background-color: rgba(0, 136, 255, 0.5);
+        }
+        
+        .md-button.import-btn.md-raised {
+            background-color: rgb(40, 164, 40);
+            color: white;
+            min-width: 66px;
+            font-weight: bold;
+        }
+        
+        .md-button.import-btn.md-raised:hover {
+            background-color: rgba(40, 164, 40, 0.5);
+        }
+        
+        .md-button.md-warn {
+            min-width: 64px;
+        }
+        
+        md-input-container.md-default-theme.md-input-focused label {
+            color: rgba(0, 136, 255, 1) !important;
+        }
+        
+        .data-input-color md-input-container .md-input {
+            width: 26px;
+            font-size: 0px;
+            border-width: 0px!important;
+        }
+        
+        #export-svg {
+            width: 601px;
+            position: absolute;
+            right: 502px;
+            top: 56px;
+            background-color: white;
+            box-shadow: 1px 2px 6px 4px #e1e1e1;
+        }
+        
+        #export-svg p {
+            font-size: 9px;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-bottom: 25px;
+        }
+        
+        .md-button.popup-theme {
+            min-width: 56px;
+            color: #c0c0c0!important;
+            position: relative;
+            top: 10px;
+            position: absolute;
+            right: 0px;
+        }
+        
+        .export-button {
+            width: 60px;
+            position: absolute;
+            left: -50px;
+            top: 110px;
+        }
+        
+        .md-button.md-primary.md-export-theme {
+            background-color: rgba(0, 136, 255, 1);
+            color: white;
+            min-width: 28px;
+            font-weight: bold;
+        }
+        
+        .md-button.md-primary.md-export-theme:hover {
+            background-color: rgba(0, 136, 255, 0.5)!important;
+        }
+        
+        .md-button.md-dropdown-theme {
+            background-color: #c3c3c3;
+            color: white;
+            min-width: 28px;
+            font-weight: bold;
+        }
+        
+        .md-button.md-dropdown-theme:hover {
+            background-color: #dbdbdb!important;
+        }
+        
+        .md-slider.md-custom {}
+        
+        #plasmid-design-tabs {}
+        
+        .md-button.md-raised.md-colorpicker-theme {
+            min-width: 35px;
+            width: 35px;
+        }
+        
+        .label-tab {
+            top: 32px;
+            flex-direction: row;
+        }
+        
+        #labels-tab {
+            overflow: hidden;
+        }
+        
+        .label-tab#box2 {
+            left: 258px;
+            top: -44px!important;
+        }
+        
+        .label-box-2 {
+            top: -40px;
+        }
+        
+        .ticks-interval {
+            width: 200px;
+            top: 14px;
+        }
+        
+        #tick-color-1 {
+            position: absolute;
+            left: 285px;
+            top: 133px;
+            flex-direction: row;
+            padding-top: 21px;
+        }
+        
+        #tick-color-2 {
+            position: absolute;
+            left: 285px;
+            flex-direction: row;
+            top: 269px;
+            padding-top: 21px;
+        }
+        
+        #track-color {
+            position: absolute;
+            right: 104px;
+            top: 25px;
+        }
+        
+        #sequence-length {
+            width: 200px;
+        }
+        
+        #plasmid-name {
+            width: 157px;
+            padding-bottom: 36px;
+            right: 42px;
+            top: 42px;
+            position: absolute;
+        }
+        
+        .url-input {
+            width: 60px!important;
+        }
+        
+        .url-input-invalid {
+            display: none!important;
+        }
+        
+        #name-input {
+            height: 23px;
+        }
+        
+        .input-labels {
+            top: 1px;
+        }
+        
+        #color-input-label {
+            top: 2px;
+            visibility: visible;
+        }
+        
+        #path-input {
+            padding-bottom: 1px;
+        }
+        
+        #label-lines-box {
+            position: relative;
+            flex-direction: row;
+        }
+        
+        .md-primary.md-new-theme {
+            min-width: 15px;
+        }
+        
+        .md-tab.md-active {
+            color: #2196F3!important;
+        }
+        
+        .md-tab {
+            color: #C3C3C3!important;
+        }
+        
+        #options {
+            height: auto;
+            width: 600px;
+            position: absolute;
+            top: 108px;
+            right: -170px;
+            z-index: 2;
+        }
+        
+        #options .md-button {
+            position: absolute;
+            left: 448px;
+            color: #9d9d9d;
+            min-width: 20px;
+        }
+        
+        #Shownoptions .md-button {
+            color: #c0c0c0!important;
+            min-width: 56px!important;
+            position: absolute;
+            left: 494px;
+            z-index: 4;
+            top: 12px;
+        }
+        
+        #Shownoptions {
+            background-color: #FFF;
+            position: absolute;
+            box-shadow: 1px 2px 6px 4px #e1e1e1;
+            border-color: #888;
+            width: 577px;
+            left: -47px;
+            top: -53px;
+            z-index: 3;
+        }
+        
+        #Shownoptions_content {
+            position: relative;
+            left: 30px;
+            padding-bottom: 9px;
+        }
+        
+        .color-input-label {
+            position: absolute;
+            right: 14px;
+        }
+        
+        .md-button.md-raised.md-part_color-theme {
+            min-width: 10px;
+            width: 16px;
+            height: 29px;
+            margin: 0;
+            min-height: 29px;
+            top: 10px;
+        }
+        
+        .input-name-repeat {
+            width: 81px!important;
+        }
+        
+        .input-start-repeat {
+            margin-left: 10px;
+            width: 76px!important;
+        }
+        
+        #design-tabs {
+            top: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+    
+    
+</html>
