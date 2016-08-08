@@ -112,7 +112,7 @@ h4 {
 }
 
 #bannercontent {
-    height:100%;
+    height:100vh;
     background-color:rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
     margin:auto;
