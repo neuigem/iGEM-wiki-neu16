@@ -1,5 +1,5 @@
 <html>
-<head> 
+<head>
 
 
 <link rel="shortcut icon" href="http://2016.igem.org/wiki/images/8/8a/Ph_logo.png" />
@@ -16,7 +16,7 @@ action=raw&ctype=text/javascript"></script>
         <script type="text/javascript" src="http://2016.igem.org/Team:Northeastern/bootstrapjs?
 action=raw&ctype=text/javascript"></script>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
 /********************************* DEFAULT WIKI SETTINGS  ********************************/
@@ -27,8 +27,8 @@ action=raw&ctype=text/javascript"></script>
 	#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
 #bodyContent {
     padding-right: 0px;}
-    
-    
+
+
 
     #globalWrapper {
         font-size:100%;
@@ -50,74 +50,74 @@ margin-top:10px;
 
 /********************************* MENU ********************************/
 	/* Wrapper for the menu */
-	.menu_wrapper { 
-		width:150px; 
-		height:100vh; 
-		position:fixed; 
+	.menu_wrapper {
+		width:150px;
+		height:100vh;
+		position:fixed;
 		padding:0px;
-		float:left; 
-		background-color:#f2f2f2; 
+		float:left;
+		background-color:#f2f2f2;
 		text-align:left;
 	}
 
 	/* styling for the menu items */
 	.menu_item {
-		width:100%; 
-		margin:-2px 0px 0px -20px; 
-		padding: 10px 10px;  
-		border-bottom: 1px solid #d3d3d3; 
+		width:100%;
+		margin:-2px 0px 0px -20px;
+		padding: 10px 10px;
+		border-bottom: 1px solid #d3d3d3;
 		font-weight:bold;
-		color:#000000; 
-		cursor: pointer; 
+		color:#000000;
+		cursor: pointer;
 	}
 
 	/* when hovering on a menu item */
-	.menu_item:hover { 
-		color:#000000; 
+	.menu_item:hover {
+		color:#000000;
 		background-color: #72c9b6;
 	}
 
 	/* decoration icon for the menu buttons*/
 	.icon {
-		float:right;  
-		font-size:16px; 
-		font-weight:bold; 
+		float:right;
+		font-size:16px;
+		font-weight:bold;
 	}
-	
+
 	/* this is the icon for when the content is collapsed */
 	.plus::before {
-		content: "+"; 
+		content: "+";
 	}
 	/* this is the icon for when the content is expanded */
 	.less::before {
-		content: "–"; 
-	}	
+		content: "–";
+	}
 
 	/* styling for the ul that creates the buttons */
 	ul.menu_items {
-		width:100%; 
-		margin-left:0px; 
+		width:100%;
+		margin-left:0px;
 		padding:0px;
-		list-style: none; 
+		list-style: none;
 	}
 
 	/* styling for the li that are the menu items */
-	.menu_items li { 
-		width:90%; 
-		margin-top:-2px; 
-		padding: 15px 0px 15px 15px ; 
+	.menu_items li {
+		width:90%;
+		margin-top:-2px;
+		padding: 15px 0px 15px 15px ;
 		display:block;
-		border-bottom: 1px solid #d3d3d3;  
-		text-align:left; 
+		border-bottom: 1px solid #d3d3d3;
+		text-align:left;
 		font-weight:bold;
-		text-decoration:none; 
-		color:#000000; 
-		list-style-type:none; 
-		cursor:pointer; 
-		-webkit-transition: all 0.4s ease; 
-		-moz-transition: all 0.4s ease; 
-		-ms-transition: all 0.4s ease; 
-		-o-transition: all 0.4s ease; transition: all 0.4s ease;  
+		text-decoration:none;
+		color:#000000;
+		list-style-type:none;
+		cursor:pointer;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease; transition: all 0.4s ease;
 	}
 
 	.menu_item a {
@@ -125,34 +125,34 @@ margin-top:10px;
 		margin-left: -20px;
 		padding: 11px 90px 12px 20px;
 		text-decoration: none;
-		color:black;		
+		color:black;
 	}
 
 	/* When hovering on a menu item */
-	.menu_items li:hover { 
+	.menu_items li:hover {
 		background-color:#72c9b6;
 		color: #000000;
 	}
 
 	/* styling for the submenus */
 	.submenu {
-		width:100%; 
-		display: none;  
+		width:100%;
+		display: none;
 		font-weight:bold;
-		cursor:pointer; 
+		cursor:pointer;
 
 	}
 
 	/* moving the margin for the submenu ul list */
-	ul.submenu { 
+	ul.submenu {
 		width: 100%;
 		margin: 10px 0px -11px 0px;
 		list-style: none;
 	}
 
 	/*styling for the submenu buttons */
-	.submenu li { 
-		width: 100%; 
+	.submenu li {
+		width: 100%;
 		margin-left: 10px;
 		margin-bottom: 0px;
 	}
@@ -160,44 +160,44 @@ margin-top:10px;
 
 	/* hover state for the submenu buttons */
 	.submenu li a {
-		width: 100%; 
-		padding: 5px 10px; 
+		width: 100%;
+		padding: 5px 10px;
 		display: inline-block;
 		border-bottom: 1px solid #d3d3d3;
-		background-color:white; 
+		background-color:white;
 		text-decoration:none;
-		color:#000000; 
+		color:#000000;
 	}
 
 
 
 	.submenu li a:hover  {
-		background-color:#000000; 
+		background-color:#000000;
 		color: #72c9b6;
 	}
 
 
 	/* When the screen is smaller than 680px, the menu has the option to hide/show - this button controls that */
-	.collapsable_menu_control { 
-		width:100%; 
+	.collapsable_menu_control {
+		width:100%;
 		padding: 15px 0px;
-		display:none; 
- 		background-color:#000000; 
-		text-align:center;  
-		font-weight:bold; 
+		display:none;
+ 		background-color:#000000;
+		text-align:center;
+		font-weight:bold;
 		color:#72c9b6;
-		cursor:pointer; 
-		-webkit-transition: all 0.4s ease; 
-		-moz-transition: all 0.4s ease; 
-		-ms-transition: all 0.4s ease; 
-		-o-transition: all 0.4s ease; 
-		transition: all 0.4s ease; 
+		cursor:pointer;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
 	}
 
 	/* when hovering on that button */
-	.collapsable_menu_control:hover { 
+	.collapsable_menu_control:hover {
 		background-color: #72c9b6;
-		color:#000000;  
+		color:#000000;
 	}
 
 /********************************* CONTENT OF THE PAGE ********************************/
@@ -206,33 +206,33 @@ margin-top:10px;
 	.content_wrapper {
 		width: 85%;
 		margin-left:150px;
-		padding:0px; 
-		float:left; 
-		background-color:white; 
+		padding:0px;
+		float:left;
+		background-color:white;
 	}
 
 	/*LAYOUT */
-	.column  { 
+	.column  {
 		padding: 10px 0px;
-		float:left; 
-		background-color:white; 
+		float:left;
+		background-color:white;
 	}
 
 	.full_size {
-		width:100%; 
+		width:100%;
 	}
 
-	.full_size img { 
+	.full_size img {
 		padding: 10px 15px;
-		width:96.5%; 
+		width:96.5%;
 	}
 
 	.half_size {
-		width: 50%; 
+		width: 50%;
 	}
-	.half_size img { 
+	.half_size img {
 		padding: 10px 15px;
-		width: 93%; 
+		width: 93%;
 	}
 
 
@@ -240,11 +240,11 @@ margin-top:10px;
 		clear:both;
 	}
 
-	.highlight { 
-		width: 90%; 
-		margin: auto; 
+	.highlight {
+		width: 90%;
+		margin: auto;
 		padding: 15px 5px;
-		background-color: #f2f2f2; 
+		background-color: #f2f2f2;
 	}
 
 	.judges-will-not-evaluate {
@@ -260,40 +260,40 @@ margin-top:10px;
 
 	/* styling for the titles */
 	.content_wrapper h1, .content_wrapper h2 {
-		padding:5px 15px; 
-		border-bottom:0px; 
+		padding:5px 15px;
+		border-bottom:0px;
 		color:#72c9b6;
 
 	}
-	.content_wrapper h3, .content_wrapper h4, .content_wrapper h5, .content_wrapper h6 { 
-		padding:5px 15px; 
-		border-bottom:0px; 
-		color: #000000;  
+	.content_wrapper h3, .content_wrapper h4, .content_wrapper h5, .content_wrapper h6 {
+		padding:5px 15px;
+		border-bottom:0px;
+		color: #000000;
 	}
 
 
 	/* font and text */
-	.content_wrapper p { 
-		padding:0px 15px; 
+	.content_wrapper p {
+		padding:0px 15px;
 		font-size: 13px;
-		font-family:Tahoma, Geneva, sans-serif; 
+		font-family:Tahoma, Geneva, sans-serif;
 	}
 
 	/* Links */
-	.content_wrapper a { 
-		font-weight: bold; 
+	.content_wrapper a {
+		font-weight: bold;
 		text-decoration: underline;
 		text-decoration-color:#72c9b6;
 		color: #72c9b6;
 		-webkit-transition: all 0.4s ease;
-		 -moz-transition: all 0.4s ease; 
-		-ms-transition: all 0.4s ease; 
-		-o-transition: all 0.4s ease; 
+		 -moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
 		transition: all 0.4s ease;
 	}
 
 	/* hover for the links */
-	.content_wrapper a:hover { 
+	.content_wrapper a:hover {
 		text-decoration:none;
 		 color:#000000;
 	}
@@ -302,59 +302,59 @@ margin-top:10px;
 	.content_wrapper ul {
 		padding:0px 20px;
 		font-size: 13px;
-		font-family:Tahoma, Geneva, sans-serif; 
+		font-family:Tahoma, Geneva, sans-serif;
 	}
 
 	/* numbered lists */
 	.content_wrapper ol {
-		padding:0px; 
+		padding:0px;
 		font-size: 13px;
-		font-family:Tahoma, Geneva, sans-serif; 
+		font-family:Tahoma, Geneva, sans-serif;
 	}
 
 	/* Table */
-	.content_wrapper table { 
-		width: 97%; 
-		margin:15px 10px; 
-		border: 1px solid #d3d3d3; 
-		border-collapse: collapse; 
+	.content_wrapper table {
+		width: 97%;
+		margin:15px 10px;
+		border: 1px solid #d3d3d3;
+		border-collapse: collapse;
 	}
 
 	/* table cells */
-	.content_wrapper  td { 
+	.content_wrapper  td {
 		padding: 10px;
-		vertical-align: text-top; 
-		border: 1px solid #d3d3d3; 
-		border-collapse: collapse; 
+		vertical-align: text-top;
+		border: 1px solid #d3d3d3;
+		border-collapse: collapse;
 	}
 
 	/* table headers */
-	.content_wrapper th { 
-		padding: 10px; 
-		vertical-align: text-top; 
-		border: 1px solid #d3d3d3; 
-		border-collapse: collapse; 
-		background-color:#f2f2f2; 
+	.content_wrapper th {
+		padding: 10px;
+		vertical-align: text-top;
+		border: 1px solid #d3d3d3;
+		border-collapse: collapse;
+		background-color:#f2f2f2;
 	}
 
 	/* Button class */
-	.button_click { 
+	.button_click {
 		margin: 10px auto;
-		padding: 15px; width:12%;  
-		text-align:center; 
-		font-weight:bold; 
+		padding: 15px; width:12%;
+		text-align:center;
+		font-weight:bold;
 		background-color: #72c9b6;
-		cursor:pointer;  
+		cursor:pointer;
 		-webkit-transition: all 0.4s ease;
- 		-moz-transition: all 0.4s ease; 
-		-ms-transition: all 0.4s ease; 
-		-o-transition: all 0.4s ease; 
-		transition: all 0.4s ease; 
+ 		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
 	}
 
 	/* button class on hover */
-	.button_click:hover {  
-		background-color:#000000; 
+	.button_click:hover {
+		background-color:#000000;
 		color:#72c9b6;
 	}
 
@@ -395,21 +395,21 @@ margin-top:10px;
 	$(document).ready(function() {
 
 		$("#HQ_page").attr('id','');
-		
+
 
 		if ( wgPageName.substring( 0,  8) == "Template")  {   // if the page is a template it displays the full name in a single line
-			$("#team_name").html( wgPageName ); 
+			$("#team_name").html( wgPageName );
 		}
 
 		else if (  ( (wgPageName.match(/\//g) || []).length ) == 0 ) {  // if it is the home page , just print the team's name
-			$("#team_name").html( wgPageName.substring( 5, wgPageName.length ) ); 
+			$("#team_name").html( wgPageName.substring( 5, wgPageName.length ) );
 		}
 
 		else {
 			 // this adds the team's name as an h1
-			$("#team_name").html( wgPageName.substring( 5 , wgPageName.indexOf("/")  ) ); 
+			$("#team_name").html( wgPageName.substring( 5 , wgPageName.indexOf("/")  ) );
 
-			// this adds the page's title as an h4	
+			// this adds the page's title as an h4
 			$("#page_name").html (     ( wgPageName.substring( wgPageName.indexOf("/") + 1, wgPageName.length ) ).replace( /\/|_/g , " ")  );
 		}
 
@@ -437,7 +437,7 @@ margin-top:10px;
 		});
 
 
-		$(".collapsable_menu_control").click(function() {	
+		$(".collapsable_menu_control").click(function() {
 			$(".menu_item").toggle();
 		});
 
@@ -453,7 +453,7 @@ margin-top:10px;
 
 </script>
 </head>
-    
+
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top" style="top:18px;">
