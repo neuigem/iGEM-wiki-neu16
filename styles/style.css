@@ -130,12 +130,9 @@ h4 {
     padding:0 20px;
 }
 
-#projintro .row, #teamintro .row {
+#words .row {
     max-width:1200px;
     margin:auto;
-}
-
-#projintro .col-md-8,  #projintro .col-md-4 {
 }
 
 /*buttons to project page*/
@@ -156,8 +153,7 @@ h4 {
 }
 
 /*team section*/
-#teamintro {
-    background:#eee;
+#words {
     margin:0 -15px;
 }
 
