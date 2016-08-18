@@ -28,60 +28,17 @@ body img {
 
 body a,
 body a:hover {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease-in-out;
     color: #aaa;
     text-decoration: none;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease-in-out;
 }
 
 html,
 body {
     height: 100%;
-}
-
-
-/* main title */
-
-h1 {
-    font-size: 60px;
-    font-weight: bold;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px .2px #000;
-    letter-spacing: 3px;
-    border-bottom: none;
-}
-
-
-/*main subtitle*/
-
-h2 {
-    font-size: 20px;
-    text-align: center;
-    color: #ccc;
-    letter-spacing: 2px;
-}
-
-
-/*section header*/
-
-h3 {
-    text-align: center;
-    font-size: 30px;
-    letter-spacing: 2px;
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-
-/*section subheaders*/
-
-h4 {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 
@@ -107,6 +64,25 @@ h4 {
     background-color: #aaa;
     background-size: cover;
     background-attachment: fixed;
+    /* main title */
+    /*main subtitle*/
+}
+
+#banner h1 {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px .2px #000;
+    letter-spacing: 3px;
+    border-bottom: none;
+}
+
+#banner h2 {
+    font-size: 20px;
+    text-align: center;
+    color: #ccc;
+    letter-spacing: 2px;
 }
 
 #banner #continue {
@@ -138,19 +114,19 @@ h4 {
 }
 
 #sponsbanner {
-    height:200px;
-    width:100%;
-    position:absolute;
-    top:calc(100vh -  200px);
-    background:#000;
-    padding:30px;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top: calc(100vh - 200px);
+    background: #000;
+    padding: 30px;
     box-sizing: border-box;
 }
 
 #sponsbanner img {
     box-shadow: none;
-    height:70px;;
-    margin:0 10px;
+    height: 70px;
+    margin: 0 10px;
 }
 
 
@@ -159,6 +135,9 @@ h4 {
 .container,
 .container-fluid {
     color: #555;
+    /* content sections */
+    /*section header*/
+    /*section subheaders*/
 }
 
 .container .content,
@@ -179,6 +158,22 @@ h4 {
 .container-fluid #words .row {
     max-width: 1200px;
     margin: auto;
+}
+
+.container h3,
+.container-fluid h3 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.container h4,
+.container-fluid h4 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 
@@ -307,6 +302,9 @@ h4 {
         top: calc(100vh - 80px);
     }
 }
+
+
+/*# sourceMappingURL=style.css.map */
 
 
 /*# sourceMappingURL=style.css.map */
