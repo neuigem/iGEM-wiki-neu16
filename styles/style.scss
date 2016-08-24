@@ -118,6 +118,17 @@ body {
         margin: auto;
     }
 
+    #icon {
+        width:100%;
+
+        img {
+            width:300px;
+            margin:auto;
+            display:block;
+            box-shadow: none;
+        }
+    }
+
 }
 
 #sponsbanner {
