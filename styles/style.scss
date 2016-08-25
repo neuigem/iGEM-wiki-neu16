@@ -41,6 +41,27 @@ body {
         text-decoration: none;
     }
 
+    /* main title */
+    h1 {
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        text-shadow: 1px 1px .2px #000;
+        letter-spacing: 3px;
+        border-bottom: none;
+    }
+
+
+    /*main subtitle*/
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+        color: #ccc;
+        letter-spacing: 2px;
+    }
+
 }
 
 html,
@@ -68,27 +89,6 @@ body {
     background-color: #aaa;
     background-size: cover;
     background-attachment: fixed;
-
-    /* main title */
-    h1 {
-        font-size: 60px;
-        font-weight: bold;
-        text-align: center;
-        color: #fff;
-        text-shadow: 1px 1px .2px #000;
-        letter-spacing: 3px;
-        border-bottom: none;
-    }
-
-
-    /*main subtitle*/
-
-    h2 {
-        font-size: 20px;
-        text-align: center;
-        color: #ccc;
-        letter-spacing: 2px;
-    }
 
     #continue {
         position: absolute;
