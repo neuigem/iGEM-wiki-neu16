@@ -71,9 +71,15 @@ body {
 
 /*navigation bar*/
 .navbar-default {
-    background-color: #fff;
+//    background-color: transparent;
+//    color:#fff;
     border: none;
+    background:#fff;
     box-shadow: 0 0 10px #555;
+
+//    .navbar-nav>li>a, .navbar-brand {
+//        color:#fff;
+//    }
 
     .navbar-toggle {
         border: none;
