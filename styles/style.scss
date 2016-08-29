@@ -137,22 +137,6 @@ body {
 
 }
 
-#sponsbanner {
-    height:200px;
-    width:100%;
-    position:absolute;
-    top:calc(100vh -  200px);
-    background:#000;
-    padding:30px;
-    box-sizing: border-box;
-
-    img {
-        box-shadow: none;
-        height:70px;;
-        margin:0 10px;
-    }
-}
-
 /*main content*/
 .container,
 .container-fluid {
@@ -274,19 +258,19 @@ body {
 
 #sponsors {
     padding: 50px 0;
+    width:1050px;
 
     img {
-        max-height: 150px;
-        max-width: 100%;
-        margin: 20px;
         box-shadow: none;
+        height:70px;
+        margin:10px;
     }
 }
 
 /*footer*/
 
 #footer {
-    background: #333;
+    background: #222;
     text-align: center;
     color: #fff;
     line-height: 50px;
