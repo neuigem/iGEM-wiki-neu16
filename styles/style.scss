@@ -32,7 +32,6 @@ body {
 
     img {
         max-width: 100%;
-        box-shadow: 0 0 30px #aaa;
     }
 
     a, a:hover {
@@ -83,6 +82,15 @@ body {
 
     .navbar-toggle {
         border: none;
+    }
+
+    img {
+        height: 40px;
+        float: left;
+        margin-top: 5px;
+        margin-right: 10px;
+        margin-left: -10px;
+        opacity: .7;
     }
 }
 
@@ -153,6 +161,10 @@ body {
     /* content sections */
     #words {
         margin: 0 -15px;
+
+        img {
+            box-shadow: 0 0 30px #aaa;
+        }
 
         .row {
             max-width: 1200px;
