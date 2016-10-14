@@ -1,100 +1,86 @@
 <html>
-    <head>
-        <title>Northeastern University 2016 iGEM Team</title>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">
-        <link href="styles/style.css" type="text/css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <style type="text/css">
+<head>
+    <title>Northeastern University 2016 iGEM Team</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">
+    <link href="styles/style.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        #vgemcollaboration {
+            background-image: url('http://2016.igem.org/wiki/images/d/de/T--Virginia--collabopen.png');
+            background-size: 180px 220px;
+            /*Adjust background-size and the width and height properties here if you wish to resize the icon*/
+            width: 180px;
+            height: 220px;
+            z-index: 100;
+        }
 
-            #vgemcollaboration {
-                background-image:url('http://2016.igem.org/wiki/images/d/de/T--Virginia--collabopen.png');
-                background-size:180px 220px; /*Adjust background-size and the width and height properties here if you wish to resize the icon*/
-                width:180px;
-                height:220px;
-                z-index:100;
-            }
+        #vgemcollaboration:hover {
+            background-image: url('http://2016.igem.org/wiki/images/a/a5/T--Virginia--collabclosed.png');
+        }
 
-            #vgemcollaboration:hover {
-                background-image:url('http://2016.igem.org/wiki/images/a/a5/T--Virginia--collabclosed.png');
-            }
+        #vgemcollaboration a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
 
-            #vgemcollaboration a {
-                display:inline-block;
-                width:100%;
-                height:100%;
-            }
-
-        </style>
-    </head>
-    <body>
+<body>
+        <!--navbar placeholder-->
         <div style="height:50px;width:100%;position:fixed;background:#fff;top:0px;left:0px;z-index:99999999;box-shadow: 0 0 10px #555;border-top:20px solid #000"></div>
-
-        <div class="container-fluid">
-
+    <div class="container-fluid">
         <!--spacer-->
         <div style="height:70px;"></div>
-
         <div id="words" style="background:#fff">
-
-        <!--content-->
-        <div class="row">
-            <div class="col-md-12">
-                <h3>attributions</h3>
+            <!--content-->
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>attributions</h3> </div>
             </div>
         </div>
-
-        </div><!--words-->
-
+        <!--words-->
         <!--advisers-->
         <div id="words" style="background:#fff;">
-
-        <!--nice words about people-->
-        <div class="row">
-            <div class="col-md-12">
-                <p>Throughout the course of our project, the Northeastern iGEM Team has collaborated with the following organizations and iGEM teams from other institutions. </p>
+            <!--nice words about people-->
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Throughout the course of our project, the Northeastern iGEM Team has collaborated with the following organizations and iGEM teams from other institutions. </p>
+                </div>
             </div>
-        </div>
-
-        <!--helper-->
-        <div class="row">
-            <div class="col-md-12" style="padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid #eee">
-                <h4 style="text-align:left;"><a style="color:#000;" href="http://2016.igem.org/Team:Harvard_BioDesign">Harvard University iGEM Team</a></h4>
-                <p>The Harvard iGEM team has been a valuable collaborator during the last couple of months. The Northeastern team has worked with the Harvard team to help characterize four of their PETase producing plasmids. These plasmids were characterized using a fluorescence intensity assay after inducing the transfected bacteria with IPTG. Results showed a significant increase in fluorescence in bacteria containing the PETase plasmids as well as a significant decrease in growth when compared to a negative control. The Harvard team has been working  to confirm the expression of our NOX protein in BL21 cells as well as His-tag purifying the protein. We are excited to see the outcome of those experiments and are grateful for the collaboration effort between both Northeastern iGEM and Harvard iGEM. </p>
+            <!--helper-->
+            <div class="row">
+                <div class="col-md-12" style="padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid #eee">
+                    <h4 style="text-align:left;"><a style="color:#000;" href="http://2016.igem.org/Team:Harvard_BioDesign">Harvard University iGEM Team</a></h4>
+                    <p>The Harvard iGEM team has been a valuable collaborator during the last couple of months. The Northeastern team has worked with the Harvard team to help characterize four of their PETase producing plasmids. These plasmids were characterized using a fluorescence intensity assay after inducing the transfected bacteria with IPTG. Results showed a significant increase in fluorescence in bacteria containing the PETase plasmids as well as a significant decrease in growth when compared to a negative control. The Harvard team has been working to confirm the expression of our NOX protein in BL21 cells as well as His-tag purifying the protein. We are excited to see the outcome of those experiments and are grateful for the collaboration effort between both Northeastern iGEM and Harvard iGEM. </p>
+                </div>
             </div>
-        </div>
-
-        <!--helper-->
-        <div class="row">
-            <div class="col-md-12" style="padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid #eee">
-                <h4 style="text-align:left;"><a style="color:#000;" href="http://2016.igem.org/Team:Virginia/Collaborations">University of Virginia iGEM Team</a></h4>
-                <div id="vgemcollaboration">
-                    <a href="http://2016.igem.org/Team:Virginia/Collaborations" target="_blank"></a>
+            <!--helper-->
+            <div class="row">
+                <div class="col-md-12" style="padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid #eee">
+                    <h4 style="text-align:left;"><a style="color:#000;" href="http://2016.igem.org/Team:Virginia/Collaborations">University of Virginia iGEM Team</a></h4>
+                    <div id="vgemcollaboration">
+                        <a href="http://2016.igem.org/Team:Virginia/Collaborations" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+            <!--helper-->
+            <div class="row">
+                <div class="col-md-12" style="padding-bottom:10px;margin-bottom:10px;">
+                    <h4 style="text-align:left;"><a style="color:#000;" href="http://2016.igem.org/Team:BostonU_HW">Boston University Hardware iGEM Team</a></h4>
+                    <p>The BU iGEM Hardware team generously offered to print a microfluidic for the characterization of our CsiD promoter that can analyze multiple concentrations of various carbon sources in parallel for imaging with a fluorescent microscope. We are thankful for their support. </p>
                 </div>
             </div>
         </div>
+        <!--words-->
+    </div>
+    <!--container-->
+    <div style="height:100px;"></div>
+    <div id="footer" style="position:fixed;bottom:0px;width:100%"> <a href="http://www.northeastern.edu/">Northeastern University, Boston MA</a> &middot; <a href="https://github.com/omwan/iGEM-wiki-neu16">Github</a> </div>
+</body>
 
-        <div class="row">
-            <div class="col-md-12">
-                <video controls style="Width:100%">
-                    <source src="images/human%2520practices/test.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-
-
-        </div><!--words-->
-
-    </div><!--container-->
-
-
-        <div id="footer" style="position:fixed;bottom:0px;width:100%">
-            <a href="http://www.northeastern.edu/">Northeastern University, Boston MA</a> &middot;
-            <a href="https://github.com/omwan/iGEM-wiki-neu16">Github</a>
-        </div>
-
-    </body>
 </html>
