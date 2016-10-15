@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Northeastern University 2016 iGEM Team</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">
+        <link href="styles/style.css" type="text/css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--navbar placeholder-->
+        <div style="height:50px;width:100%;position:fixed;background:#fff;top:0px;left:0px;z-index:99999999;box-shadow: 0 0 10px #555;border-top:20px solid #000"></div>
+
+
+    <div class="container-fluid">
+
+
+        <div style="height:70px;"></div>
+
+        <div id="words">
+        <div class="row" style="padding-top:0px;">
+            <div class="col-md-12">
+                <h1 style="color:#555;text-shadow:none;font-weight:normal;margin-bottom:-50px;margin-top:50px;">Model</h1>
+                <h3>Optimizing the MEC System</h3>
+            </div>
+        </div>
+
+        <!--description-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content">
+                    <h4>Abstract</h4>
+                    <p>In this section of our project we will present and assess the viability of our model utilizing computational methods to unravel the genetic networks involved in our experimental design. The medium we utilized to perform out computational assessment is the technical computing language of Matlab. In the past few years Matlab’s ‘Simbiology’ package utilizing has been growing among scientists seeking to generate mathematical models for cell biology. Therefore, our approach took the initiative to utilize the package to characterize the interactions of our bio bricks with other cellular components.  </p>
+                    <p>In order to model our gene network we employed the power of Ordinary Differential Equations (ODE). In each paradigm of reactivity between reactants and products the ODE’s were optimized to characterize the functional connectivity between our bio bricks. Here we present in detail the network diagrams, the output of our functions, and the methodology utilized to generate abstract plots of the outputs of our networks. </p>
+                    <p>The two networks we are presenting involve the function generated within a single E. Coli bacterium, upon transfection of the plasmids described in our bio brick section. The first network is that of Proteorhodopsin, a light-driven proton pump, allowing for generation of ATP and proton output that would lead to an increased efficiency of the Microbial Fuel Cell. The second network involves the functionality of NADH oxidase, in inducing an anaerobic environment, and through its biochemical reactivity increase electricity generation by the Microbial Fuel Cell system. </p>
+                    <div id="aboutbuttons">
+                        <a href="/">Read Full Text</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div><!--words-->
+
+        <div id="modelfigures">
+        <div class="row" style="margin-top:50px;">
+            <div class="col-md-12">
+                <h4>NADH Oxidase</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <center>
+                    <img src="images/model/Nox%20Diagram.png">
+                    <p style="color:#888;font-size:12px;">circuit of NADH Oxidase activity</p>
+                </center>
+            </div>
+            <div class="col-md-6">
+                <center>
+                    <img src="images/model/Nox%20Kinetics.jpg">
+                    <p style="color:#888;font-size:12px;">output of NADH Oxidase circuit functions</p>
+                </center>
+            </div>
+        </div>
+        <div class="row" style="margin-top:50px;">
+            <div class="col-md-12">
+                <h4>Proteorhodopsin</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <center>
+                    <img src="images/model/PR%20diagrams.png">
+                    <p style="color:#888;font-size:12px;">circuit of Proteorhodopsin activity</p>
+                </center>
+            </div>
+            <div class="col-md-6">
+                <center>
+                    <img src="images/model/pr%20kinetics%20plotting.jpg">
+                    <p style="color:#888;font-size:12px;">output of Proteorhodopsin circuit functions</p>
+                </center>
+            </div>
+        </div>
+
+        </div><!--words-->
+
+        <div style="height:100px;"></div>
+
+
+        </div><!--container-->
+
+        <div id="footer">
+            <a href="http://www.northeastern.edu/">Northeastern University, Boston MA</a> &middot;
+            <a href="https://github.com/omwan/iGEM-wiki-neu16">Github</a>
+        </div>
+
+    </body>
+</html>

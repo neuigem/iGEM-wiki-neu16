@@ -153,17 +153,23 @@ body {
 }
 
 .container #words,
-.container-fluid #words {
+.container #modelfigures,
+.container-fluid #words,
+.container-fluid #modelfigures {
     margin: 0 -15px;
 }
 
 .container #words img,
-.container-fluid #words img {
+.container #modelfigures img,
+.container-fluid #words img,
+.container-fluid #modelfigures img {
     box-shadow: 0 0 30px #aaa;
 }
 
 .container #words .row,
-.container-fluid #words .row {
+.container #modelfigures .row,
+.container-fluid #words .row,
+.container-fluid #modelfigures .row {
     max-width: 1200px;
     margin: auto;
 }
@@ -270,6 +276,12 @@ body {
     box-shadow: none;
     height: 70px;
     margin: 10px;
+}
+
+#modelfigures img {
+    box-sizing: border-box;
+    max-width: 500px;
+    margin: 20px 0;
 }
 
 
